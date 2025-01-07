@@ -33,3 +33,8 @@
 *.pdb
 *.tlog
 *.idb
+*.db
+*.db-shm
+*.vsidx
+*.db-wal
+*.opendb
