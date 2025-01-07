@@ -1,0 +1,104 @@
+﻿  Precompiled.cpp
+  ModelIO.cpp
+  BillBoardEffect.cpp
+  BlendState.cpp
+  Camera.cpp
+  ConstantBuffer.cpp
+  DebugUI.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Math\Inc\ENMath.h(34,16): warning C4804: '>=': unsafe use of type 'bool' in operation
+  (compiling source file '/Src/Camera.cpp')
+  C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Math\Inc\ENMath.h(34,16):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Camera.cpp(21,12):
+  	see reference to function template instantiation 'T ENgines::Math::Abs<bool>(T)' being compiled
+          with
+          [
+              T=bool
+          ]
+  
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Math\Inc\ENMath.h(34,37): warning C4804: '-': unsafe use of type 'bool' in operation
+  (compiling source file '/Src/Camera.cpp')
+  
+  GaussianBlurEffect.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\GaussianBlurEffect.cpp(72,25): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file '/Src/GaussianBlurEffect.cpp')
+  
+  GraphicsSystem.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\GraphicsSystem.cpp(116,109): warning C4244: 'argument': conversion from 'float' to 'UINT8', possible loss of data
+  (compiling source file '/Src/GraphicsSystem.cpp')
+  
+  MeshBuffer.cpp
+  MeshBuilder.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\MeshBuilder.cpp(443,88): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Src/MeshBuilder.cpp')
+  
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\MeshBuilder.cpp(443,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Src/MeshBuilder.cpp')
+  
+  ModelCache.cpp
+  PixelShader.cpp
+  PostProcessingEffect.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(71,51): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+  (compiling source file '/Src/PostProcessingEffect.cpp')
+  
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(71,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+  (compiling source file '/Src/PostProcessingEffect.cpp')
+  
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(72,53): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
+  (compiling source file '/Src/PostProcessingEffect.cpp')
+  
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(72,28): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
+  (compiling source file '/Src/PostProcessingEffect.cpp')
+  
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(129,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Src/PostProcessingEffect.cpp')
+  
+  RenderObject.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file '/Src/RenderObject.cpp')
+  C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\RenderObject.cpp(35,26):
+  	see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::Mesh>(const MeshType &)' being compiled
+          with
+          [
+              MeshType=ENgines::Graphics::Mesh
+          ]
+  
+  RenderTarget.cpp
+  Sampler.cpp
+  ShadowEffect.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\ShadowEffect.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '/Src/ShadowEffect.cpp')
+  
+  SimpleDraw.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\SimpleDraw.cpp(229,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  (compiling source file '/Src/SimpleDraw.cpp')
+  
+  StandardEffect.cpp
+  Terrain.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Terrain.cpp(69,30): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file '/Src/Terrain.cpp')
+  
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Terrain.cpp(69,51): warning C4018: '>=': signed/unsigned mismatch
+  (compiling source file '/Src/Terrain.cpp')
+  
+  Generating Code...
+  Compiling...
+  TerrainEffect.cpp
+  Texture.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Texture.cpp(39,2): warning C4477: 'snprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 4 has type 'const std::filesystem::path::value_type *'
+  (compiling source file '/Src/Texture.cpp')
+  C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Texture.cpp(39,2):
+  consider using '%ls' in the format string
+  C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Texture.cpp(39,2):
+  consider using '%lls' in the format string
+  C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Texture.cpp(39,2):
+  consider using '%Ls' in the format string
+  C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Src\Texture.cpp(39,2):
+  consider using '%ws' in the format string
+  
+  TextureCache.cpp
+  VertexShader.cpp
+  Generating Code...
+  Graphics.vcxproj -> C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\x64\Debug\Graphics.lib

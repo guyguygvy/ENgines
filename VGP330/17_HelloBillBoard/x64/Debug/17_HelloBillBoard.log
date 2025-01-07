@@ -1,0 +1,14 @@
+﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\VSProps\FrameworkLib.props (4,5)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\Framework\Core\Core.vcxproj]
+  GameState.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'GameState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\VGP330\17_HelloBillBoard\GameState.cpp(31,21):
+          see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::Mesh>(const MeshType &)' being compiled
+          with
+          [
+              MeshType=ENgines::Graphics::Mesh
+          ]
+  
+  17_HelloBillBoard.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\x64\Debug\17_HelloBillBoard.exe

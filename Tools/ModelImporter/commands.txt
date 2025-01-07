@@ -1,0 +1,3 @@
+-scale 0.01 ../../Assets/Models/Abe/Abe.fbx ../../Assets/Models/Abe/Abe.model
+-scale 0.01 ../../Assets/Models/Man/Man.fbx ../../Assets/Models/Man/Man.model
+-scale 0.01 ../../Assets/Models/Remy/Remy.fbx ../../Assets/Models/Remy/Remy.model

@@ -1,0 +1,15 @@
+﻿  GameState.cpp
+C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'GameState.cpp')
+  C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\VGP330\18_HelloInfared\GameState.cpp(35,24):
+  	see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::MeshPX>(const MeshType &)' being compiled
+          with
+          [
+              MeshType=ENgines::Graphics::MeshPX
+          ]
+  
+  WinMain.cpp
+  Generating Code...
+  18_HelloInfared.vcxproj -> C:\Users\LCV2312792\Desktop\ENgines (1)\ENgines\x64\Debug\18_HelloInfrared.exe
