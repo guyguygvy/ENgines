@@ -38,3 +38,6 @@
 *.vsidx
 *.db-wal
 *.opendb
+/.vs
+/.vs
+/.vs

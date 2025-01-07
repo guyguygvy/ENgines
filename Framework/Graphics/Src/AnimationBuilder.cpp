@@ -1,0 +1,45 @@
+#include "Precompiled.h"
+#include "AnimationBuilder.h"
+
+using namespace ENgines;
+using namespace ENgines::Graphics;
+
+namespace
+{
+	template<class T>
+	inline void PushKey(KeyFrames<T>& keyframes, const T& value, float t)
+	{
+		ASSERT(keyframes.empty() || keyframes.back().time <= t), "Cannot add keyframes back in time");
+		keyframes.emplace_back(value, t);
+	}
+}
+
+AnimationBuilder& AnimationBuilder::AddPositionKey(const Math::Vector3& pos, float time)
+{
+	PushKey(mWorkingCopy.mPositionKeys, pos, time);
+	mWorkingCopy.mDuration = math::Max(mWorkingCopy.mDuration, time);
+	return *this;
+}
+
+AnimationBuilder& AnimationBuilder::AddRotationKey(const Math::Quaternion& rot, float time)
+{
+	PushKey(mWorkingCopy.mRotationKeys, rot, time);
+	mWorkingCopy.mDuration = math::Max(mWorkingCopy.mDuration, time);
+	return *this;
+}
+
+AnimationBuilder& AnimationBuilder::AddScaleKey(const Math::Vector3& scale, float time)
+{
+	PushKey(mWorkingCopy.mScaleKeys, scale, time);
+	mWorkingCopy.mDuration = math::Max(mWorkingCopy.mDuration, time);
+	return *this;
+}
+
+Animation AnimationBuilder::Build()
+{
+	ASSERT(!mWorkingCopy.mPositionKeys.empty() ||
+		!mWorkingCopy.mRotationKeys.empty() ||
+		!mWorkingCopy.mScale Keys.empty(),
+		"No animation keys present");
+	return std::move(mWorkingCopy);
+}

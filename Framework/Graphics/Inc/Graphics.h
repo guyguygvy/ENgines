@@ -32,3 +32,6 @@
 #include "GaussianBlurEffect.h"
 #include "ShadowEffect.h"
 #include "BillboardEffect.h"
+#include "Keyframe.h"
+#include "AnimationBuilder.h"
+#include "Animation.h"
