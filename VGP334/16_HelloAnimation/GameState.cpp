@@ -16,7 +16,6 @@ void GameState::Initialize()
 	mDirectionalLight.diffuse = { 0.7f, 0.7f, 0.7f, 1.0f };
 	mDirectionalLight.specular = { 0.9f, 0.9f, 0.9f, 1.0f };
 
-	float x = 0.0f;
 	Mesh mesh = MeshBuilder::CreateSphere(300, 300, 1.0f);
 
 	std::filesystem::path shaderFile = L"../../Assets/Shaders/Standard.fx";
@@ -30,11 +29,33 @@ void GameState::Initialize()
 	
 	Mesh ground = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
 	mGround.meshBuffer.Initialize(ground);
-	mGround.diffuseMapId = TextureCache::Get->LoadTexture("planets/earth.jpg");
+	mGround.diffuseMapId = TextureCache::Get()->LoadTexture("misc/concrete.jpg");
+
+	mAnimationTime = 0.0f;
+
+	mAnimation = AnimationBuilder()
+		.AddPositionKey({ 0.0f, 0.5f, 0.0f }, 0.0f)
+		.AddPositionKey({ 0.0f, 2.5f, 0.0f }, 1.0f)
+		.AddPositionKey({ 0.0f, 0.5f, 0.0f }, 2.0f)
+		.AddScaleKey({ 1.0f, 0.25f, 1.0f }, 0.0f)
+		.AddScaleKey({ 0.5f, 1.5f, 0.5f }, 0.1f)
+		.AddScaleKey({ 0.5f, 1.5f, 0.5f }, 0.9f)
+		.AddScaleKey({ 1.0f, 1.0f, 1.0f }, 1.0f)
+		.AddScaleKey({ 1.0f, 1.0f, 1.0f }, 1.9f)
+		.AddScaleKey({ 1.0f, 0.25f, 1.0f }, 2.0f)
+		.AddRotationKey(Quaternion::Identity, 1.0f)
+		//.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 90.0f * Math::Constants::DegToRad), 0.5f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 180.0f * Math::Constants::DegToRad), 1.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 270.0f * Math::Constants::DegToRad), 1.5f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 359.0f * Math::Constants::DegToRad), 2.0f)
+		.AddRotationKey(Quaternion::Identity, 2.0f)
+		.Build();
 }
 
 void GameState::Terminate()
 {
+	mGround.Terminate();
+	mBall.Terminate();
 	mStandardEffect.Terminate();
 }
 
@@ -42,6 +63,15 @@ void GameState::Terminate()
 void GameState::Update(float deltaTime)
 {
 	UpdateCamera(deltaTime);
+
+	if (mAnimation.GetDuration() > 0.0f)
+	{
+		mAnimationTime += deltaTime;
+		while (mAnimationTime > mAnimation.GetDuration())
+		{
+			mAnimationTime -= mAnimation.GetDuration();	// Simple loop
+		}
+	}
 }
 
 void GameState::UpdateCamera(float deltaTime)
@@ -84,7 +114,9 @@ bool checkBox = true;
 
 void GameState::Render()
 {
+	mBall.transform = mAnimation.GetTransform(mAnimationTime);
 	mStandardEffect.Begin();
+	mStandardEffect.Render(mGround);
 	mStandardEffect.Render(mBall);
 	mStandardEffect.End();
 }

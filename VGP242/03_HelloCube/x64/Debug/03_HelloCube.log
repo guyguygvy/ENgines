@@ -1,1 +1,116 @@
-﻿
+﻿  ShapeState.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C3409: empty attribute block is not allowed
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C2143: syntax error: missing ']' before '('
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,15): error C2143: syntax error: missing ';' before ']'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,34): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2059: syntax error: ':'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2334: unexpected token(s) preceding ':'; skipping apparent function body
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2039: 'Input': is not a member of 'ENgines'
+  (compiling source file 'ShapeState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(4,11):
+      see declaration of 'ENgines'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2146: syntax error: missing ';' before identifier 'Input'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,13): error C2059: syntax error: 'enum [tag]'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,23): error C2059: syntax error: 'function-style cast'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(26,18): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(27,21): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(29,20): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(30,23): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file 'ShapeState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\03_HelloCube\ShapeState.cpp(72,73): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  WinMain.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C3409: empty attribute block is not allowed
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C2143: syntax error: missing ']' before '('
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,15): error C2143: syntax error: missing ';' before ']'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,34): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2059: syntax error: ':'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2334: unexpected token(s) preceding ':'; skipping apparent function body
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2039: 'Input': is not a member of 'ENgines'
+  (compiling source file 'WinMain.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(4,11):
+      see declaration of 'ENgines'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2146: syntax error: missing ';' before identifier 'Input'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,13): error C2059: syntax error: 'enum [tag]'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,23): error C2059: syntax error: 'function-style cast'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(26,18): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(27,21): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(29,20): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(30,23): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file 'WinMain.cpp')
+  
+  Generating Code...

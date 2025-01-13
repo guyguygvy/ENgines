@@ -1,0 +1,9 @@
+﻿  GameState.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(19,2): error C1903: unable to recover from previous error(s); stopping compilation
+  (compiling source file 'GameState.cpp')
+  
+  WinMain.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(19,2): error C1903: unable to recover from previous error(s); stopping compilation
+  (compiling source file 'WinMain.cpp')
+  
+  Generating Code...

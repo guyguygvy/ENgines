@@ -1,5 +1,136 @@
-﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\VSProps\FrameworkLib.props (4,5)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\Framework\Core\Core.vcxproj]
-  GameState.cpp
+﻿  GameState.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C3409: empty attribute block is not allowed
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C2143: syntax error: missing ']' before '('
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,15): error C2143: syntax error: missing ';' before ']'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,34): error C2238: unexpected token(s) preceding ';'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2059: syntax error: ':'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2334: unexpected token(s) preceding ':'; skipping apparent function body
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2039: 'Input': is not a member of 'ENgines'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(4,11):
+      see declaration of 'ENgines'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2146: syntax error: missing ';' before identifier 'Input'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,13): error C2059: syntax error: 'enum [tag]'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,23): error C2059: syntax error: 'function-style cast'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2143: syntax error: missing ';' before '{'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(26,18): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(27,21): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(29,20): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(30,23): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file '../../VGP330/12_HelloModel/GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(60,44): error C2653: 'KeyCode': is not a class or namespace name
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(60,53): error C2065: 'LSHIFT': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(60,14): error C2737: 'moveSpeed': const object must be initialized
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(62,23): error C2653: 'KeyCode': is not a class or namespace name
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(62,32): error C2065: 'W': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(66,28): error C2653: 'KeyCode': is not a class or namespace name
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(66,37): error C2065: 'S': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(70,23): error C2653: 'KeyCode': is not a class or namespace name
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(70,32): error C2065: 'D': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(74,28): error C2653: 'KeyCode': is not a class or namespace name
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(74,37): error C2065: 'A': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(78,23): error C2653: 'KeyCode': is not a class or namespace name
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(78,32): error C2065: 'E': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(82,28): error C2653: 'KeyCode': is not a class or namespace name
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(82,37): error C2065: 'Q': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(86,13): error C2660: 'ENgines::Input::InputSystem::IsMouseDown': function does not take 1 arguments
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(29,8):
+      see declaration of 'ENgines::Input::InputSystem::IsMouseDown'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\12_HelloModel\GameState.cpp(86,13):
+      while trying to match the argument list '(ENgines::Graphics::MouseButton)'
+  
   WinMain.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C3409: empty attribute block is not allowed
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,4): error C2143: syntax error: missing ']' before '('
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,15): error C2143: syntax error: missing ';' before ']'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(13,34): error C2238: unexpected token(s) preceding ';'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2059: syntax error: ':'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(14,9): error C2334: unexpected token(s) preceding ':'; skipping apparent function body
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2039: 'Input': is not a member of 'ENgines'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(4,11):
+      see declaration of 'ENgines'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C2146: syntax error: missing ';' before identifier 'Input'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(3,20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,13): error C2059: syntax error: 'enum [tag]'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(5,23): error C2059: syntax error: 'function-style cast'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2143: syntax error: missing ';' before '{'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputTypes.h(6,2): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(26,18): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(27,21): error C2061: syntax error: identifier 'KeyCode'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(29,20): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Input\Inc\InputSystem.h(30,23): error C2061: syntax error: identifier 'MouseButton'
+  (compiling source file '../12_HelloModel/WinMain.cpp')
+  
   Generating Code...
-  12_HelloModel.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\ENgines\x64\Debug\12_HelloModel.exe

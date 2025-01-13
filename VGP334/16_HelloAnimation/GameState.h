@@ -18,4 +18,7 @@ protected:
 	ENgines::Graphics::RenderObject mGround;
 	ENgines::Graphics::DirectionalLight mDirectionalLight;
 	ENgines::Graphics::StandardEffect mStandardEffect;
+
+	ENgines::Graphics::Animation mAnimation;
+	float mAnimationTime = 0.0f;
 };

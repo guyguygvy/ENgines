@@ -9,6 +9,7 @@ namespace
 	float GetLerpTime(float startTime, float endTime, float time)
 	{
 		float t = (time - startTime) / (endTime - startTime);
+		t = t * t;
 		return Math::Clamp(t, 0.0f, 1.0f);
 	}
 }
@@ -58,7 +59,7 @@ Math::Quaternion Animation::GetRotation(float time) const
 		if (time < mRotationKeys[i].time)
 		{
 			float t = GetLerpTime(mRotationKeys[i - 1].time, mRotationKeys[i].time, time);
-			return Math::Slerp(mRotationKeys[i - 1].key, mRotationKeys[i].key, t);
+			return Math::Quaternion::Slerp(mRotationKeys[i - 1].key, mRotationKeys[i].key, t);
 		}
 	}
 

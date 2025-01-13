@@ -33,5 +33,5 @@
 #include "ShadowEffect.h"
 #include "BillboardEffect.h"
 #include "Keyframe.h"
-#include "AnimationBuilder.h"
 #include "Animation.h"
+#include "AnimationBuilder.h"
