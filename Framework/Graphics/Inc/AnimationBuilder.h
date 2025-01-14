@@ -10,7 +10,7 @@ namespace ENgines::Graphics
 		AnimationBuilder& AddRotationKey(const Math::Quaternion& rot, float time);
 		AnimationBuilder& AddScaleKey(const Math::Vector3& scale, float time);
 
-		[(nodiscard)] Animation Build();
+		[[nodiscard]] Animation Build();
 	private:
 		Animation mWorkingCopy;
 	};

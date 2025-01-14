@@ -1,30 +1,30 @@
 ﻿  Precompiled.cpp
   ENMath.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(35,7): warning C4552: '-': result of expression not used
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(35,7): warning C4552: '-': result of expression not used
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(96,56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(96,56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(96,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(96,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(97,56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(97,56): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(97,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(97,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(98,57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(98,57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(98,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(98,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(99,57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(99,57): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Src\ENMath.cpp(99,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Math\Src\ENMath.cpp(99,19): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   (compiling source file '/Src/ENMath.cpp')
   
-  Math.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\Math.lib
+  Math.vcxproj -> C:\Users\LCV2312792\Desktop\GITHUB\x64\Debug\Math.lib

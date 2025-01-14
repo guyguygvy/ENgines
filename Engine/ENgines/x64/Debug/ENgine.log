@@ -1,4 +1,5 @@
 ﻿  Precompiled.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(19,2): error C1903: unable to recover from previous error(s); stopping compilation
-  (compiling source file 'Src/Precompiled.cpp')
-  
+  App.cpp
+  ENgines.cpp
+  Generating Code...
+  ENgine.vcxproj -> C:\Users\LCV2312792\Desktop\GITHUB\x64\Debug\ENgines.lib

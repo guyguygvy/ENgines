@@ -18,7 +18,7 @@ namespace ENgines::Graphics
 
 		}
 		T key = T();
-		float time = 0.0f
+		float time = 0.0f;
 	};
 
 	template<class T>
