@@ -9,7 +9,10 @@ namespace
 	float GetLerpTime(float startTime, float endTime, float time)
 	{
 		float t = (time - startTime) / (endTime - startTime);
-		t = t * t;
+		t = t * t;	// Ease in
+		// Ease out = (t*(2-t))
+		// Ease in out:
+
 		return Math::Clamp(t, 0.0f, 1.0f);
 	}
 }
@@ -20,7 +23,7 @@ Transform Animation::GetTransform(float time) const
 	transform.position = GetPosition(time);
 	transform.rotation = GetRotation(time);
 	transform.scale = GetScale(time);
-	return Transform();
+	return transform;
 }
 
 float Animation::GetDuration() const
@@ -35,7 +38,7 @@ Math::Vector3 Animation::GetPosition(float time) const
 		return Math::Vector3::Zero;
 	}
 
-	for (uint32_t i = 1; 1 < mPositionKeys.size(); ++i)
+	for (uint32_t i = 1; i < mPositionKeys.size(); ++i)
 	{
 		if (time < mPositionKeys[i].time)
 		{
@@ -44,7 +47,7 @@ Math::Vector3 Animation::GetPosition(float time) const
 		}
 	}
 
-	return mPositionKeys.back().key;
+	return mPositionKeys.back().key;	// return last frame if key is outside of time frame
 }
 
 Math::Quaternion Animation::GetRotation(float time) const
@@ -54,7 +57,7 @@ Math::Quaternion Animation::GetRotation(float time) const
 		return Math::Quaternion::Identity;
 	}
 
-	for (uint32_t i = 1; 1 < mRotationKeys.size(); ++i)
+	for (uint32_t i = 1; i < mRotationKeys.size(); ++i)
 	{
 		if (time < mRotationKeys[i].time)
 		{
@@ -70,10 +73,10 @@ Math::Vector3 Animation::GetScale(float time) const
 {
 	if (mScaleKeys.empty())
 	{
-		return Math::Vector3::Zero;
+		return Math::Vector3::One;
 	}
 
-	for (uint32_t i = 1; 1 < mScaleKeys.size(); ++i)
+	for (uint32_t i = 1; i < mScaleKeys.size(); ++i)
 	{
 		if (time < mScaleKeys[i].time)
 		{

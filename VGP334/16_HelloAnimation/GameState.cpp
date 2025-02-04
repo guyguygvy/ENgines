@@ -26,7 +26,7 @@ void GameState::Initialize()
 	Mesh ball = MeshBuilder::CreateSphere(60, 60, 0.5f);
 	mBall.meshBuffer.Initialize(ball);
 	mBall.diffuseMapId = TextureCache::Get()->LoadTexture("misc/basketball.jpg");
-	
+
 	Mesh ground = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
 	mGround.meshBuffer.Initialize(ground);
 	mGround.diffuseMapId = TextureCache::Get()->LoadTexture("misc/concrete.jpg");
@@ -34,21 +34,28 @@ void GameState::Initialize()
 	mAnimationTime = 0.0f;
 
 	mAnimation = AnimationBuilder()
-		.AddPositionKey({ 0.0f, 0.5f, 0.0f }, 0.0f)
+		.AddScaleKey({ 1.0f, 0.5f, 1.0f }, 0.0f)
+		.AddPositionKey({ 0.0f, 0.5f, -3.0f }, 0.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 90.0f * Math::Constants::DegToRad), 0.5f)
 		.AddPositionKey({ 0.0f, 2.5f, 0.0f }, 1.0f)
-		.AddPositionKey({ 0.0f, 0.5f, 0.0f }, 2.0f)
-		.AddScaleKey({ 1.0f, 0.25f, 1.0f }, 0.0f)
-		.AddScaleKey({ 0.5f, 1.5f, 0.5f }, 0.1f)
-		.AddScaleKey({ 0.5f, 1.5f, 0.5f }, 0.9f)
-		.AddScaleKey({ 1.0f, 1.0f, 1.0f }, 1.0f)
-		.AddScaleKey({ 1.0f, 1.0f, 1.0f }, 1.9f)
-		.AddScaleKey({ 1.0f, 0.25f, 1.0f }, 2.0f)
-		.AddRotationKey(Quaternion::Identity, 1.0f)
-		//.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 90.0f * Math::Constants::DegToRad), 0.5f)
-		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 180.0f * Math::Constants::DegToRad), 1.0f)
-		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 270.0f * Math::Constants::DegToRad), 1.5f)
-		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 359.0f * Math::Constants::DegToRad), 2.0f)
-		.AddRotationKey(Quaternion::Identity, 2.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 180.0f * Math::Constants::DegToRad), 1.5f)
+		.AddPositionKey({ 0.0f, 0.5f, 3.0f }, 2.0f)
+		.AddScaleKey({ 1.0f, 1.0f, 0.5f }, 2.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 90.0f * Math::Constants::DegToRad), 2.5f)
+		.AddPositionKey({ 1.5f, 2.5f, 1.5f }, 3.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 180.0f * Math::Constants::DegToRad), 3.5f)
+		.AddPositionKey({ 3.0f, 0.5f, 0.0f }, 4.0f)
+		.AddScaleKey({ 0.5f, 1.0f, 1.0f }, 4.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 90.0f * Math::Constants::DegToRad), 4.5f)
+		.AddPositionKey({ 0.0f, 2.5f, 0.0f }, 5.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 180.0f * Math::Constants::DegToRad), 5.5f)
+		.AddPositionKey({ -3.0f, 0.5f, 0.0f }, 6.0f)
+		.AddScaleKey({ 1.0f, 1.0f, 0.5f }, 6.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 90.0f * Math::Constants::DegToRad), 6.5f)
+		.AddPositionKey({ -1.5f, 2.5f, -1.5f }, 7.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 180.0f * Math::Constants::DegToRad), 7.5f)
+		.AddPositionKey({ 0.0f, 0.5f, -3.0f }, 8.0f)
+		.AddScaleKey({ 1.0f, 0.5f, 1.0f }, 8.0f)
 		.Build();
 }
 
@@ -59,7 +66,6 @@ void GameState::Terminate()
 	mStandardEffect.Terminate();
 }
 
-
 void GameState::Update(float deltaTime)
 {
 	UpdateCamera(deltaTime);
@@ -69,7 +75,7 @@ void GameState::Update(float deltaTime)
 		mAnimationTime += deltaTime;
 		while (mAnimationTime > mAnimation.GetDuration())
 		{
-			mAnimationTime -= mAnimation.GetDuration();	// Simple loop
+			mAnimationTime -= mAnimation.GetDuration();
 		}
 	}
 }
@@ -77,7 +83,7 @@ void GameState::Update(float deltaTime)
 void GameState::UpdateCamera(float deltaTime)
 {
 	auto input = InputSystem::Get();
-	const float moveSpeed = (input->IsKeyDown(KeyCode::LSHIFT) ? 10.0f : 1.0f) * deltaTime;
+	const float moveSpeed = (input->IsKeyDown(KeyCode::LSHIFT) ? 10.0f : 7.0f) * deltaTime;
 	const float turnSpeed = 0.1f * deltaTime;
 	if (input->IsKeyDown(KeyCode::W))
 	{
@@ -135,11 +141,6 @@ void GameState::DebugUI()
 		ImGui::ColorEdit4("Diffuse##Light", &mDirectionalLight.diffuse.r);
 		ImGui::ColorEdit4("Specular##Light", &mDirectionalLight.specular.r);
 	}
-
-	ImGui::Separator();
-	ImGui::Text("RenderTarget");
-
-	ImGui::Checkbox("CheckBox", &checkBox);
-	mStandardEffect.DebugUI();
 	ImGui::End();
 }
+

@@ -24,6 +24,7 @@
     <ProjectGuid>{7bf559fb-2032-4002-8cb7-a8ef5dc7a214}</ProjectGuid>
     <RootNamespace>My16HelloAnimation</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>16_HelloAnimation</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

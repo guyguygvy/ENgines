@@ -120,6 +120,18 @@
     <ClInclude Include="Inc\AnimationBuilder.h">
       <Filter>Inc</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\AnimationUtil.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Bone.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Skeleton.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\AnimationClip.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Precompiled.cpp">
@@ -201,6 +213,9 @@
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Src\AnimationBuilder.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AnimationUtil.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
