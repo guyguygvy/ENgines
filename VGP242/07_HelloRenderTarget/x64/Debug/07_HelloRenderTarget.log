@@ -1,39 +1,77 @@
 ﻿  GameState.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,19): error C2065: 'Skeleton': undeclared identifier
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
   (compiling source file 'GameState.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,8): error C2923: 'std::unique_ptr': 'Skeleton' is not a valid template type argument for parameter '_Ty'
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,19):
-      see declaration of 'Skeleton'
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,8): error C2976: 'std::unique_ptr': too few template arguments
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
-      see declaration of 'std::unique_ptr'
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,29): error C2955: 'std::unique_ptr': use of class template requires template argument list
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
-      see declaration of 'std::unique_ptr'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'GameState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\07_HelloRenderTarget\GameState.cpp(20,14):
+          see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::MeshPX>(const MeshType &)' being compiled
+          with
+          [
+              MeshType=ENgines::Graphics::MeshPX
+          ]
   
   WinMain.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,19): error C2065: 'Skeleton': undeclared identifier
-  (compiling source file '../../VGP242/07_HelloRenderTarget/WinMain.cpp')
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'WinMain.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,8): error C2923: 'std::unique_ptr': 'Skeleton' is not a valid template type argument for parameter '_Ty'
-  (compiling source file '../../VGP242/07_HelloRenderTarget/WinMain.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,19):
-      see declaration of 'Skeleton'
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,8): error C2976: 'std::unique_ptr': too few template arguments
-  (compiling source file '../../VGP242/07_HelloRenderTarget/WinMain.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
-      see declaration of 'std::unique_ptr'
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model.h(27,29): error C2955: 'std::unique_ptr': use of class template requires template argument list
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file '../../VGP242/07_HelloRenderTarget/WinMain.cpp')
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
-      see declaration of 'std::unique_ptr'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
   
   Generating Code...
+ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticInitialize(struct ENgines::Physics::PhysicsWorld::Settings const &)" (?StaticInitialize@PhysicsWorld@Physics@ENgines@@SAXAEBUSettings@123@@Z) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
+ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticTerminate(void)" (?StaticTerminate@PhysicsWorld@Physics@ENgines@@SAXXZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
+ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static class ENgines::Physics::PhysicsWorld * __cdecl ENgines::Physics::PhysicsWorld::Get(void)" (?Get@PhysicsWorld@Physics@ENgines@@SAPEAV123@XZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
+ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::PhysicsWorld::Update(float)" (?Update@PhysicsWorld@Physics@ENgines@@QEAAXM@Z) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\07_HelloRenderTarget.exe : fatal error LNK1120: 4 unresolved externals

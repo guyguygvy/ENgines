@@ -3,9 +3,12 @@
 #include "VertexTypes.h"
 #include "Camera.h"
 #include "RenderObject.h"
+#include "AnimationUtil.h"
 
 using namespace ENgines;
 using namespace ENgines::Graphics;
+
+static constexpr size_t MaxBoneCount = 256;
 
 void StandardEffect::Initialize(const std::filesystem::path& path)
 {
@@ -17,10 +20,12 @@ void StandardEffect::Initialize(const std::filesystem::path& path)
 	mLightBuffer.Initialize();
 	mMaterialBuffer.Initialize();
 	mSettingsBuffer.Initialize();
+	mBoneTransformBuffer.Initialize(MaxBoneCount * sizeof(Math::Matrix4));
 }
 
 void StandardEffect::Terminate()
 {
+	mBoneTransformBuffer.Terminate();
 	mSettingsBuffer.Terminate();
 	mMaterialBuffer.Terminate();
 	mLightBuffer.Terminate();
@@ -37,13 +42,17 @@ void StandardEffect::Begin()
 	mSampler.BindPS(0);
 
 	mTransformBuffer.BindVS(0);
-	mLightBuffer.BindVS(1);
-	mLightBuffer.BindPS(1);
+	// (0) -> register 0
+	// (1) -> register 1
+	mLightBuffer.BindVS(1);	// direction
+	mLightBuffer.BindPS(1);	// colors
 
 	mMaterialBuffer.BindPS(2);
 
 	mSettingsBuffer.BindPS(3);
 	mSettingsBuffer.BindVS(3);
+
+	mBoneTransformBuffer.BindVS(4);
 }
 
 void StandardEffect::End()
@@ -56,7 +65,7 @@ void StandardEffect::End()
 
 void StandardEffect::Render(const RenderObject& renderObject)
 {
-	ASSERT(mCamera != nullptr, "StandardEffect: Must have a Camera");
+	ASSERT(mCamera != nullptr, "StandardEffect: must have a camera");
 	SettingsData settingsData;
 	settingsData.useDiffuseMap = mSettingsData.useDiffuseMap > 0 && renderObject.diffuseMapId > 0;
 	settingsData.useNormalMap = mSettingsData.useNormalMap > 0 && renderObject.normalMapId > 0;
@@ -65,6 +74,7 @@ void StandardEffect::Render(const RenderObject& renderObject)
 	settingsData.bumpWeight = mSettingsData.bumpWeight;
 	settingsData.useShadowMap = mSettingsData.useShadowMap > 0 && mShadowMap != nullptr;
 	settingsData.depthBias = mSettingsData.depthBias;
+	settingsData.useSkinning = 0;
 
 	const Math::Matrix4 matWorld = renderObject.transform.GetMatrix4();
 	const Math::Matrix4 matView = mCamera->GetViewMatrix();
@@ -100,7 +110,7 @@ void StandardEffect::Render(const RenderObject& renderObject)
 
 void StandardEffect::Render(const RenderGroup& renderGroup)
 {
-	ASSERT(mCamera != nullptr, "StandardEffect: Must have a Camera");
+	ASSERT(mCamera != nullptr, "StandardEffect: must have a camera");
 
 	const Math::Matrix4 matWorld = renderGroup.transform.GetMatrix4();
 	const Math::Matrix4 matView = mCamera->GetViewMatrix();
@@ -112,6 +122,7 @@ void StandardEffect::Render(const RenderGroup& renderGroup)
 	settingsData.useShadowMap = mSettingsData.useShadowMap > 0 && mShadowMap != nullptr;
 	settingsData.depthBias = mSettingsData.depthBias;
 	settingsData.bumpWeight = mSettingsData.bumpWeight;
+	settingsData.useSkinning = mSettingsData.useSkinning > 0 && renderGroup.skeleton != nullptr;
 
 	TransformData transformData;
 	transformData.wvp = Transpose(matFinal);
@@ -123,6 +134,22 @@ void StandardEffect::Render(const RenderGroup& renderGroup)
 		const Math::Matrix4 matLightProjection = mLightCamera->GetProjectionMatrix();
 		transformData.lwvp = Transpose(matWorld * matLightView * matLightProjection);
 		mShadowMap->BindPS(4);
+	}
+
+	if (settingsData.useSkinning)
+	{
+		AnimationUtil::BoneTransforms boneTransforms;
+		AnimationUtil::ComputeBoneTransforms(renderGroup.modelId, boneTransforms, renderGroup.animator);
+		AnimationUtil::ApplyBoneOffset(renderGroup.modelId, boneTransforms);
+
+		// our engine is left handed
+		// directX is right handed
+		for (auto& transform : boneTransforms)
+		{
+			transform = Transpose(transform);
+		}
+		boneTransforms.resize(MaxBoneCount);
+		mBoneTransformBuffer.Update(boneTransforms.data());
 	}
 
 	mTransformBuffer.Update(transformData);

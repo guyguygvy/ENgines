@@ -1,7 +1,8 @@
 #include "Precompiled.h"
 #include "ShadowEffect.h"
+
 #include "RenderObject.h"
-#include "VertexTypes.h""
+#include "VertexTypes.h"
 
 using namespace ENgines;
 using namespace ENgines::Graphics;
@@ -16,7 +17,7 @@ void ShadowEffect::Initialize()
 	mLightCamera.SetNearPlane(1.0f);
 	mLightCamera.SetFarPlane(2000.0f);
 
-	constexpr uint32_t depthMapResolution = 4096;	
+	constexpr uint32_t depthMapResolution = 4096;	// 4k
 	mDepthMapRenderTarget.Initialize(depthMapResolution, depthMapResolution, Texture::Format::RGBA_U32);
 }
 
