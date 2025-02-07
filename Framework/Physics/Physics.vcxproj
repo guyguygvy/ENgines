@@ -156,13 +156,13 @@
       <Project>{516192eb-788a-4fe7-b2b7-2ef9ac036b12}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Core\Core.vcxproj">
-      <Project>{e6c1874f-7010-4426-a3dc-b90e92023d73}</Project>
+      <Project>{56afbb7b-a9d1-4a75-ac8a-18c5dcf6ab74}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Graphics\Graphics.vcxproj">
-      <Project>{4ed2e746-1d15-4c41-8e77-c6487f43b778}</Project>
+      <Project>{e9865d63-38b8-43c7-b0be-e63658c47195}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Math\Math.vcxproj">
-      <Project>{d1ca39ee-e8d8-4137-ada1-9e35f5d47ac2}</Project>
+      <Project>{3ae45c89-fbba-4bc9-b2be-4b9cf7bd4999}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
