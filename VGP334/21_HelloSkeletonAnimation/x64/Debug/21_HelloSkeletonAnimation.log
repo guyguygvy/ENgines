@@ -1,4 +1,5 @@
-﻿  GameState.cpp
+﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Core\Core.vcxproj]
+  GameState.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
   (compiling source file 'GameState.cpp')
   
@@ -17,7 +18,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\21_HelloSkeletonAnimation\GameState.cpp(123,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\21_HelloSkeletonAnimation\GameState.cpp(126,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
@@ -33,44 +34,13 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshB
   (compiling source file 'GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
       the template instantiation context (the oldest one first) is
-          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\21_HelloSkeletonAnimation\GameState.cpp(31,21):
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\21_HelloSkeletonAnimation\GameState.cpp(34,21):
           see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::Mesh>(const MeshType &)' being compiled
           with
           [
               MeshType=ENgines::Graphics::Mesh
           ]
   
-  WinMain.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
-      the template instantiation context (the oldest one first) is
-          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
-          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
-          with
-          [
-              DBVTNODE=btDbvtNode
-          ]
-  
-  Generating Code...
 ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticInitialize(struct ENgines::Physics::PhysicsWorld::Settings const &)" (?StaticInitialize@PhysicsWorld@Physics@ENgines@@SAXAEBUSettings@123@@Z) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
 ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticTerminate(void)" (?StaticTerminate@PhysicsWorld@Physics@ENgines@@SAXXZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
 ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static class ENgines::Physics::PhysicsWorld * __cdecl ENgines::Physics::PhysicsWorld::Get(void)" (?Get@PhysicsWorld@Physics@ENgines@@SAPEAV123@XZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)

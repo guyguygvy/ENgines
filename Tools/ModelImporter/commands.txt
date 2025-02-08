@@ -1,3 +1,7 @@
 -scale 0.01 ../../Assets/Models/Abe/Abe.fbx ../../Assets/Models/Abe/Abe.model
 -scale 0.01 ../../Assets/Models/Man/Man.fbx ../../Assets/Models/Man/Man.model
 -scale 0.01 ../../Assets/Models/Remy/Remy.fbx ../../Assets/Models/Remy/Remy.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/Capoeira.fbx ../../Assets/Models/Remy/Capoeira.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/OldManIdle.fbx ../../Assets/Models/Remy/OldManIdle.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/TwistDance.fbx ../../Assets/Models/Remy/TwistDance.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/PainGesture.fbx ../../Assets/Models/Remy/PainGesture.model

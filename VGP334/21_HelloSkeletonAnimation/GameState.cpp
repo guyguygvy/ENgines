@@ -25,6 +25,9 @@ void GameState::Initialize()
 
 	mCharacter.Initialize(L"../../Assets/Models/Remy/Remy.model", &mCharacterAnimator);
 	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/Capoeira.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/OldMan.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/TwistDance.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/PainGesture.model");
 	mCharacterAnimator.Initialize(mCharacter.modelId);
 
 	Mesh groundMesh = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
