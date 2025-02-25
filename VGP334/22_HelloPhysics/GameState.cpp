@@ -23,40 +23,34 @@ void GameState::Initialize()
 	mStandardEffect.SetCamera(mCamera);
 	mStandardEffect.SetDirectionalLight(mDirectionalLight);
 
-	Mesh ball = MeshBuilder::CreateSphere(60, 60, 0.5f);
-	mBall.meshBuffer.Initialize(ball);
-	mBall.diffuseMapId = TextureCache::Get()->LoadTexture("misc/basketball.jpg");
+	mCharacter.Initialize(L"../../Assets/Models/Remy/Remy.model", &mCharacterAnimator);
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/Capoeira.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/OldMan.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/TwistDance.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/PainGesture.model");
+	mCharacterAnimator.Initialize(mCharacter.modelId);
 
-	mBallShape.InitializeSphere(0.5f);
-	mBallRB.Initialize(mBall.transform, mBallShape, 1.0f);
-
-	Mesh ground = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
-	mGround.meshBuffer.Initialize(ground);
-	mGround.diffuseMapId = TextureCache::Get()->LoadTexture("misc/concrete.jpg");
-
-	mGroundShape.InitializeHull({ 5.0f, 0.5f, 5.0f }, { 0.0f, -0.5f, 0.0f });
-	mGroundRB.Initialize(mGround.transform, mGroundShape);
+	Mesh groundMesh = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
+	mGround.meshBuffer.Initialize(groundMesh);
+	mGround.diffuseMapId = TextureCache::Get()->LoadTexture(L"misc/concrete.jpg");
+	mGround.material.ambient = { 0.3f, 0.3f, 0.3f, 1.0f };
+	mGround.material.diffuse = { 0.8f, 0.8f, 0.8f, 1.0f };
+	mGround.material.specular = { 0.9f, 0.9f, 0.9f, 1.0f };
+	mGround.material.power = 20.0f;
 }
 
 void GameState::Terminate()
 {
-	mGroundRB.Terminate();
-	mGroundShape.Terminate();
-	mBallRB.Terminate();
-	mBallShape.Terminate();
 	mGround.Terminate();
-	mBall.Terminate();
+	mCharacter.Terminate();
 	mStandardEffect.Terminate();
 }
+
 
 void GameState::Update(float deltaTime)
 {
 	UpdateCamera(deltaTime);
-
-	if (InputSystem::Get()->IsKeyPressed(KeyCode::SPACE))
-	{
-		mBallRB.SetVelocity({ 0.0f, 10.0f, 0.0f });
-	}
+	mCharacterAnimator.Update(deltaTime);
 }
 
 void GameState::UpdateCamera(float deltaTime)
@@ -95,13 +89,20 @@ void GameState::UpdateCamera(float deltaTime)
 	}
 }
 
-bool checkBox = true;
-
 void GameState::Render()
 {
 	mStandardEffect.Begin();
+	if (mShowSkeleton)
+	{
+		AnimationUtil::BoneTransforms boneTransforms;
+		AnimationUtil::ComputeBoneTransforms(mCharacter.modelId, boneTransforms, &mCharacterAnimator);
+		AnimationUtil::DrawSkeleton(mCharacter.modelId, boneTransforms);
+	}
+	else
+	{
+		mStandardEffect.Render(mCharacter);
+	}
 	mStandardEffect.Render(mGround);
-	mStandardEffect.Render(mBall);
 	mStandardEffect.End();
 }
 
@@ -114,10 +115,21 @@ void GameState::DebugUI()
 		{
 			mDirectionalLight.direction = Normalize(mDirectionalLight.direction);
 		}
-
 		ImGui::ColorEdit4("Ambient##Light", &mDirectionalLight.ambient.r);
 		ImGui::ColorEdit4("Diffuse##Light", &mDirectionalLight.diffuse.r);
 		ImGui::ColorEdit4("Specular##Light", &mDirectionalLight.specular.r);
 	}
+
+
+	ImGui::Checkbox("ShowSkeleton", &mShowSkeleton);
+
+	int maxAnimations = mCharacterAnimator.GetAnimationCount();
+	if (ImGui::DragInt("AnimIndex", &mAnimationIndex, 1, -1, maxAnimations - 1))
+	{
+		mCharacterAnimator.PlayAnimation(mAnimationIndex, true);
+	}
+	mStandardEffect.DebugUI();
 	ImGui::End();
+
+	SimpleDraw::Render(mCamera);
 }

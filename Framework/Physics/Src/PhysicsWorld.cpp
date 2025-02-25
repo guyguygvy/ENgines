@@ -70,7 +70,9 @@ void PhysicsWorld::DebugUI()
 {
 	if (ImGui::CollapsingHeader("Physics", ImGuiTreeNodeFlags_DefaultOpen))
 	{
-
+		if (ImGui::DragFloat3("Gravity", &mSettings.gravity.x, 0.1f)) {
+			mDynamicsWorld->setGravity(TobtVector3(mSettings.gravity));
+		}
 	}
 }
 

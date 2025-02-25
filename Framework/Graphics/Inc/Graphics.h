@@ -41,3 +41,4 @@
 #include "VertexTypes.h"
 #include "Animator.h"
 #include "AnimationClip.h"
+#include "ParticleSystemEffect.h"

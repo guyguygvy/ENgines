@@ -12,14 +12,18 @@ RigidBody::~RigidBody()
 	ASSERT(mRigidBody == nullptr, "RigidBody: terminate must be called");
 }
 
-void RigidBody::Initialize(ENgines::Graphics::Transform& graphicsTransform, const CollisionShape& shape, float mass)
+void RigidBody::Initialize(ENgines::Graphics::Transform& graphicsTransform, const CollisionShape& shape, float mass, bool addToWorld)
 {
 	mGraphicsTransform = &graphicsTransform;
 	mMass = mass;
 
 	mMotionState = new btDefaultMotionState(ConvertTobtTransform(graphicsTransform));
 	mRigidBody = new btRigidBody(mMass, mMotionState, shape.mCollisionShape);
-	PhysicsWorld::Get()->Register(this);
+
+	if (addToWorld)
+	{
+		PhysicsWorld::Get()->Register(this);
+	}
 }
 
 void RigidBody::Terminate()
@@ -40,6 +44,17 @@ void RigidBody::SetVelocity(const ENgines::Math::Vector3& velocity)
 {
 	mRigidBody->activate();
 	mRigidBody->setLinearVelocity(TobtVector3(velocity));
+}
+
+void RigidBody::Activate()
+{
+	PhysicsWorld::Get()->Register(this);
+	mRigidBody->activate();
+}
+
+void RigidBody::Deactivate()
+{
+	PhysicsWorld::Get()->Unregister(this);
 }
 
 bool RigidBody::IsDynamic() const

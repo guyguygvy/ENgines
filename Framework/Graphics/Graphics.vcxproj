@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Inc\ModelIO.cpp" />
+    <ClCompile Include="Inc\ParticleSystemEffect.h" />
     <ClCompile Include="Src\Animation.cpp" />
     <ClCompile Include="Src\AnimationBuilder.cpp" />
     <ClCompile Include="Src\AnimationUtil.cpp" />
@@ -194,6 +195,7 @@
     <ClCompile Include="Src\MeshBuffer.cpp" />
     <ClCompile Include="Src\MeshBuilder.cpp" />
     <ClCompile Include="Src\ModelCache.cpp" />
+    <ClCompile Include="Src\ParticleSystemEffect.cpp" />
     <ClCompile Include="Src\PixelShader.cpp" />
     <ClCompile Include="Src\PostProcessingEffect.cpp" />
     <ClCompile Include="Src\Precompiled.cpp">
