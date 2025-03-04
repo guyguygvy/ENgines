@@ -51,7 +51,7 @@ void GameState::Initialize()
 
 	mCloth.meshBuffer.Initialize(nullptr, sizeof(Vertex), mClothMesh.vertices.size(),
 		mClothMesh.indices.data(), mClothMesh.indices.size());
-	mCloth.diffuseMapId = TextureCache::Get()->LoadTexture(L"sprites/splashscreen.bmp");
+	mCloth.diffuseMapId = TextureCache::Get()->LoadTexture(L"misc/concrete.jpg");
 }
 
 void GameState::Terminate()

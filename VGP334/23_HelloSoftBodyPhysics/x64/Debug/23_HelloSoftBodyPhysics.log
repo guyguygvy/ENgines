@@ -1,4 +1,15 @@
 ﻿  GameState.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
+  (compiling source file 'GameState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
+      see declaration of 'AnimationCallback'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(12,33): error C2061: syntax error: identifier 'AnimationCallback'
+  (compiling source file 'GameState.cpp')
+  
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
   (compiling source file 'GameState.cpp')
   
@@ -25,6 +36,17 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\23_HelloSoftBodyPhysi
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\23_HelloSoftBodyPhysics\GameState.cpp(52,80): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\23_HelloSoftBodyPhysics\GameState.cpp(127,79): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
   WinMain.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
+  (compiling source file 'WinMain.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
+      see declaration of 'AnimationCallback'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(12,33): error C2061: syntax error: identifier 'AnimationCallback'
+  (compiling source file 'WinMain.cpp')
+  
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
   (compiling source file 'WinMain.cpp')
   

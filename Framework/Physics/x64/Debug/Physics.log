@@ -1,3 +1,30 @@
-﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Core\Core.vcxproj]
-  PhysicsWorld.cpp
-  Physics.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\Physics.lib
+﻿  Precompiled.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
+  (compiling source file 'Src/Precompiled.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
+  (compiling source file 'Src/Precompiled.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
+      see declaration of 'AnimationCallback'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(12,33): error C2061: syntax error: identifier 'AnimationCallback'
+  (compiling source file 'Src/Precompiled.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'Src/Precompiled.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'Src/Precompiled.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'Src/Precompiled.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'Src/Precompiled.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'Src/Precompiled.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'Src/Precompiled.cpp')
+  
