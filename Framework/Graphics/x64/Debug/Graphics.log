@@ -1,161 +1,40 @@
-﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Core\Core.vcxproj]
+﻿C:\Users\LCV2312792\Desktop\GITHUB\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\LCV2312792\Desktop\GITHUB\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\LCV2312792\Desktop\GITHUB\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\LCV2312792\Desktop\GITHUB\Framework\Core\Core.vcxproj]
   ModelIO.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\ModelIO.cpp(11,17): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Inc/ModelIO.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(12,33): error C2061: syntax error: identifier 'AnimationCallback'
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\ModelIO.cpp(17,38): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(11,17): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\ModelIO.cpp(23,35): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(17,38): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\ModelIO.cpp(249,21): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(23,35): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\ModelIO.cpp(259,23): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(249,21): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\ModelIO.cpp(352,25): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(259,23): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file '/Inc/ModelIO.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(352,25): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file '/Inc/ModelIO.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(361,26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\ModelIO.cpp(361,26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
   Animation.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/Animation.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/Animation.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  AnimationBuilder.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/AnimationBuilder.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/AnimationBuilder.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(12,33): error C2061: syntax error: identifier 'AnimationCallback'
-  (compiling source file '/Src/AnimationBuilder.cpp')
-  
-  AnimationUtil.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/AnimationUtil.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/AnimationUtil.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  Animator.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/Animator.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/Animator.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  BillBoardEffect.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/BillBoardEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/BillBoardEffect.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  GaussianBlurEffect.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/GaussianBlurEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/GaussianBlurEffect.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\GaussianBlurEffect.cpp(72,25): warning C4018: '<': signed/unsigned mismatch
-  (compiling source file '/Src/GaussianBlurEffect.cpp')
-  
-  ModelCache.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/ModelCache.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/ModelCache.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  PostProcessingEffect.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/PostProcessingEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/PostProcessingEffect.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(71,51): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-  (compiling source file '/Src/PostProcessingEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(71,27): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
-  (compiling source file '/Src/PostProcessingEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(72,53): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-  (compiling source file '/Src/PostProcessingEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\PostProcessingEffect.cpp(72,28): warning C4244: 'initializing': conversion from 'uint32_t' to 'const float', possible loss of data
-  (compiling source file '/Src/PostProcessingEffect.cpp')
-  
   RenderObject.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Src/RenderObject.cpp')
+  C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\MeshBuffer.h(20,23):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Src\RenderObject.cpp(38,26):
+  	see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::Mesh>(const MeshType &)' being compiled
+          with
+          [
+              MeshType=ENgines::Graphics::Mesh
+          ]
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/RenderObject.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  ShadowEffect.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/ShadowEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/ShadowEffect.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  StandardEffect.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/StandardEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/StandardEffect.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
-  TerrainEffect.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file '/Src/TerrainEffect.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file '/Src/TerrainEffect.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
-  
+  VertexShader.cpp
   Generating Code...
+x64\Debug\ParticleSystemEffect.obj : warning LNK4042: object specified more than once; extras ignored
+  Graphics.vcxproj -> C:\Users\LCV2312792\Desktop\GITHUB\x64\Debug\Graphics.lib

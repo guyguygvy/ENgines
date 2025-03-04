@@ -1,30 +1,20 @@
-﻿  Precompiled.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30): error C2065: 'AnimationCallback': undeclared identifier
-  (compiling source file 'Src/Precompiled.cpp')
+﻿  Particle.cpp
+  ParticleSystem.cpp
+  PhysicsDebugDraw.cpp
+  PhysicsWorld.cpp
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\PhysicsDebugDraw.cpp(10,54): error C3861: 'ToColor': identifier not found
+  (compiling source file '/Src/PhysicsDebugDraw.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,20): error C2923: 'ENgines::Graphics::Keyframes': 'AnimationCallback' is not a valid template type argument for parameter 'T'
-  (compiling source file 'Src/Precompiled.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Keyframe.h(30,30):
-      see declaration of 'AnimationCallback'
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\PhysicsDebugDraw.cpp(15,76): error C3861: 'ToColor': identifier not found
+  (compiling source file '/Src/PhysicsDebugDraw.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\AnimationBuilder.h(12,33): error C2061: syntax error: identifier 'AnimationCallback'
-  (compiling source file 'Src/Precompiled.cpp')
+  RigidBody.cpp
+  SoftBody.cpp
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\SoftBody.cpp(41,22): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Src/SoftBody.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file 'Src/Precompiled.cpp')
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\SoftBody.cpp(76,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Src/SoftBody.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'Src/Precompiled.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'Src/Precompiled.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'Src/Precompiled.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'Src/Precompiled.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'Src/Precompiled.cpp')
-  
+  Generating Code...
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\Particle.cpp(63): warning C4172: returning address of local variable or temporary

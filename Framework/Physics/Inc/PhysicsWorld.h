@@ -36,11 +36,10 @@ namespace ENgines::Physics
 	private:
 		Settings mSettings;
 
-		// bullet object
 		btBroadphaseInterface* mInterface = nullptr;
 		btCollisionDispatcher* mDispatcher = nullptr;
 		btDefaultCollisionConfiguration* mCollisionConfiguration = nullptr;
-		btDiscreteDynamicsWorld* mDynamicsWorld = nullptr;
+		//btDiscreteDynamicsWorld* mDynamicsWorld = nullptr;
 		btSequentialImpulseConstraintSolver* mSolver = nullptr;
 
 		using PhysicsObjects = std::vector<PhysicsObject*>;
