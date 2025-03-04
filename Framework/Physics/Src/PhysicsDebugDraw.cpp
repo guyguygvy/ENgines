@@ -27,7 +27,7 @@ void PhysicsDebugDraw::draw3dText(const btVector3& location, const char* textStr
 
 void PhysicsDebugDraw::setDebugMode(int debugMode)
 {
-	mDebugMode = debugMode;
+	mDebugMode = debugMode; 
 }
 
 int PhysicsDebugDraw::getDebugMode() const
