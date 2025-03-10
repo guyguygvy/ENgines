@@ -12,6 +12,7 @@ namespace ENgines::Graphics
 		float GetDuration() const;
 
 		void PlayEvent(float prevTime, float curTime);
+		void PlayParameterEvent(float prevTime, float curTime, const Event& key);
 
 	private:
 		Math::Vector3 GetPosition(float time) const;
@@ -24,6 +25,7 @@ namespace ENgines::Graphics
 		PositionKeys mPositionKeys;
 		RotationKeys mRotationKeys;
 		ScaleKeys mScaleKeys;
+		EventParameterKeys mEventParameterKeys;
 		EventKeys mEventKeys;
 
 		float mDuration;

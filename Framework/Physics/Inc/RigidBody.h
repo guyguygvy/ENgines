@@ -17,6 +17,7 @@ namespace ENgines::Physics
 
 		void SetPosition(const ENgines::Math::Vector3& position);
 		void SetVelocity(const ENgines::Math::Vector3& velocity);
+		const Math::Vector3 GetVelocity() const;
 
 		void Activate();
 		void Deactivate();

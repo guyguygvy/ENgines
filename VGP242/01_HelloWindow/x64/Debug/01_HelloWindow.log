@@ -28,8 +28,4 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
               DBVTNODE=btDbvtNode
           ]
   
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticInitialize(struct ENgines::Physics::PhysicsWorld::Settings const &)" (?StaticInitialize@PhysicsWorld@Physics@ENgines@@SAXAEBUSettings@123@@Z) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticTerminate(void)" (?StaticTerminate@PhysicsWorld@Physics@ENgines@@SAXXZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static class ENgines::Physics::PhysicsWorld * __cdecl ENgines::Physics::PhysicsWorld::Get(void)" (?Get@PhysicsWorld@Physics@ENgines@@SAPEAV123@XZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::PhysicsWorld::Update(float)" (?Update@PhysicsWorld@Physics@ENgines@@QEAAXM@Z) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\01_HelloWindow.exe : fatal error LNK1120: 4 unresolved externals
+LINK : fatal error LNK1104: cannot open file 'C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\Graphics.lib'

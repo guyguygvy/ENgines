@@ -6,7 +6,8 @@ namespace ENgines
 	{
 		None,
 		SpacePressed,
-		MKeyPressed
+		MKeyPressed,
+		AnimationKey
 	};
 
 	class Event
@@ -32,5 +33,16 @@ namespace ENgines
 	{
 	public:
 		MKeyPressedEvent() : Event(EventType::MKeyPressed) {}
+	};
+	class AnimationKeyEvent : public Event
+	{
+	public:
+		AnimationKeyEvent() : Event(EventType::AnimationKey) {}
+		AnimationKeyEvent(int index) : Event(EventType::AnimationKey), mIndex(index) {}
+		int GetIndex() const { return mIndex; }
+		void SetIndex(int index) { mIndex = index; }
+
+	private:
+		int mIndex = 0;
 	};
 }

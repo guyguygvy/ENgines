@@ -1,1 +1,2 @@
 C:\Users\LCV2312792\Desktop\GITHUB\External\DirectXTK\Audio\Bin\Desktop_2022\x64\Debug\DirectXTKAudioWin8.lib
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\DirectXTK\Audio\Bin\Desktop_2022\x64\Debug\DirectXTKAudioWin8.lib

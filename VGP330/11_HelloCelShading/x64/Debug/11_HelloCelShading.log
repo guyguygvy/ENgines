@@ -1,24 +1,24 @@
 ﻿  GameState.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
@@ -29,7 +29,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
           ]
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/GameState.cpp')
+  (compiling source file 'GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP330\11_HelloCelShading\GameState.cpp(24,21):
@@ -41,22 +41,22 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshB
   
   WinMain.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file '../../VGP330/11_HelloCelShading/WinMain.cpp')
+  (compiling source file 'WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/WinMain.cpp')
+  (compiling source file 'WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/WinMain.cpp')
+  (compiling source file 'WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/WinMain.cpp')
+  (compiling source file 'WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/WinMain.cpp')
+  (compiling source file 'WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../VGP330/11_HelloCelShading/WinMain.cpp')
+  (compiling source file 'WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file '../../VGP330/11_HelloCelShading/WinMain.cpp')
@@ -70,8 +70,4 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
           ]
   
   Generating Code...
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticInitialize(struct ENgines::Physics::PhysicsWorld::Settings const &)" (?StaticInitialize@PhysicsWorld@Physics@ENgines@@SAXAEBUSettings@123@@Z) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticTerminate(void)" (?StaticTerminate@PhysicsWorld@Physics@ENgines@@SAXXZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: static class ENgines::Physics::PhysicsWorld * __cdecl ENgines::Physics::PhysicsWorld::Get(void)" (?Get@PhysicsWorld@Physics@ENgines@@SAPEAV123@XZ) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-ENgines.lib(App.obj) : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::PhysicsWorld::Update(float)" (?Update@PhysicsWorld@Physics@ENgines@@QEAAXM@Z) referenced in function "public: void __cdecl ENgines::App::Run(struct ENgines::AppConfig const &)" (?Run@App@ENgines@@QEAAXAEBUAppConfig@2@@Z)
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\11_HelloCelShading.exe : fatal error LNK1120: 4 unresolved externals
+LINK : fatal error LNK1104: cannot open file 'C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\Graphics.lib'

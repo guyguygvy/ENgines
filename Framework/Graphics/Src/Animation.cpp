@@ -31,6 +31,28 @@ float Animation::GetDuration() const
 	return mDuration;
 }
 
+void Animation::PlayEvent(float prevTime, float curTime)
+{
+	for (uint32_t i = 0; i < mEventKeys.size(); ++i)
+	{
+		if (mEventKeys[i].time > prevTime && mEventKeys[i].time <= curTime)
+		{
+			mEventKeys[i].key();
+		}
+	}
+}
+
+void Animation::PlayParameterEvent(float prevTime, float curTime, const Event& key)
+{
+	for (uint32_t i = 0; i < mEventParameterKeys.size(); ++i)
+	{
+		if (mEventParameterKeys[i].time > prevTime && mEventParameterKeys[i].time <= curTime)
+		{
+			mEventParameterKeys[i].key(key);
+		}
+	}
+}
+
 Math::Vector3 Animation::GetPosition(float time) const
 {
 	if (mPositionKeys.empty())
