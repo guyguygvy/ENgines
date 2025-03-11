@@ -46,7 +46,7 @@ void GameState::Initialize()
 		v.position.y = 10.0f;
 	}
 	uint32_t lastVertex = mClothMesh.vertices.size() - 1;
-	uint32_t lastVertexOS = lastVertex - cols;	// OS -> Other Side
+	uint32_t lastVertexOS = lastVertex - cols;	
 	mClothSoftBody.Initialize(mClothMesh, 1.0f, { lastVertex, lastVertexOS });
 
 	mCloth.meshBuffer.Initialize(nullptr, sizeof(Vertex), mClothMesh.vertices.size(),

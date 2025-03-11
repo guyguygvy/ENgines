@@ -1,28 +1,28 @@
 ﻿  Precompiled.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
   (compiling source file 'Src/Precompiled.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'Src/Precompiled.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'Src/Precompiled.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'Src/Precompiled.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'Src/Precompiled.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'Src/Precompiled.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'Src/Precompiled.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
-      the template instantiation context (the oldest one first) is
-          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
-          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+  C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+  	see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
           with
           [
               DBVTNODE=btDbvtNode
@@ -32,20 +32,26 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
   Particle.cpp
   ParticleSystem.cpp
   PhysicsDebugDraw.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Physics\Src\PhysicsDebugDraw.cpp(10,54): error C3861: 'ToColor': identifier not found
-  (compiling source file '/Src/PhysicsDebugDraw.cpp')
-  
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Physics\Src\PhysicsDebugDraw.cpp(15,76): error C3861: 'ToColor': identifier not found
-  (compiling source file '/Src/PhysicsDebugDraw.cpp')
-  
   PhysicsWorld.cpp
   RigidBody.cpp
   SoftBody.cpp
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Physics\Src\SoftBody.cpp(41,22): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\SoftBody.cpp(41,22): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/Src/SoftBody.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Physics\Src\SoftBody.cpp(76,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\SoftBody.cpp(76,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/Src/SoftBody.cpp')
   
   Generating Code...
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Physics\Src\Particle.cpp(63,1): warning C4172: returning address of local variable or temporary 
+C:\Users\LCV2312792\Desktop\GITHUB\Framework\Physics\Src\Particle.cpp(63): warning C4172: returning address of local variable or temporary
+ParticleSystem.obj : warning LNK4006: "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticInitialize(struct ENgines::Physics::PhysicsWorld::Settings const &)" (?StaticInitialize@PhysicsWorld@Physics@ENgines@@SAXAEBUSettings@123@@Z) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: static void __cdecl ENgines::Physics::PhysicsWorld::StaticTerminate(void)" (?StaticTerminate@PhysicsWorld@Physics@ENgines@@SAXXZ) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: static class ENgines::Physics::PhysicsWorld * __cdecl ENgines::Physics::PhysicsWorld::Get(void)" (?Get@PhysicsWorld@Physics@ENgines@@SAPEAV123@XZ) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: __cdecl ENgines::Physics::PhysicsWorld::~PhysicsWorld(void)" (??1PhysicsWorld@Physics@ENgines@@QEAA@XZ) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: void __cdecl ENgines::Physics::PhysicsWorld::Initialize(struct ENgines::Physics::PhysicsWorld::Settings const &)" (?Initialize@PhysicsWorld@Physics@ENgines@@QEAAXAEBUSettings@123@@Z) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: void __cdecl ENgines::Physics::PhysicsWorld::Terminate(void)" (?Terminate@PhysicsWorld@Physics@ENgines@@QEAAXXZ) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: void __cdecl ENgines::Physics::PhysicsWorld::Update(float)" (?Update@PhysicsWorld@Physics@ENgines@@QEAAXM@Z) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: void __cdecl ENgines::Physics::PhysicsWorld::DebugUI(void)" (?DebugUI@PhysicsWorld@Physics@ENgines@@QEAAXXZ) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: void __cdecl ENgines::Physics::PhysicsWorld::Register(class ENgines::Physics::PhysicsObject *)" (?Register@PhysicsWorld@Physics@ENgines@@QEAAXPEAVPhysicsObject@23@@Z) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: void __cdecl ENgines::Physics::PhysicsWorld::Unregister(class ENgines::Physics::PhysicsObject *)" (?Unregister@PhysicsWorld@Physics@ENgines@@QEAAXPEAVPhysicsObject@23@@Z) already defined in PhysicsWorld.obj; second definition ignored
+ParticleSystem.obj : warning LNK4006: "public: void __cdecl ENgines::Physics::PhysicsWorld::SetGravity(struct ENgines::Math::Vector3 const &)" (?SetGravity@PhysicsWorld@Physics@ENgines@@QEAAXAEBUVector3@Math@3@@Z) already defined in PhysicsWorld.obj; second definition ignored
+  Physics.vcxproj -> C:\Users\LCV2312792\Desktop\GITHUB\x64\Debug\Physics.lib

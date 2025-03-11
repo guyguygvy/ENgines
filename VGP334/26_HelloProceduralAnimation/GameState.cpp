@@ -41,7 +41,7 @@ void GameState::Initialize()
 		Mesh sphere = MeshBuilder::CreateSphere(30, 30, sphereSize);
 		BodyPart& newPart = mBodyParts.emplace_back();
 		newPart.segment.meshBuffer.Initialize(sphere);
-		newPart.segment.diffuseMapId = TextureCache::Get()->LoadTexture("Sprites/green.jpg");
+		newPart.segment.diffuseMapId = TextureCache::Get()->LoadTexture("misc/concrete.jpg");
 		newPart.range = sphereSize;
 	}
 	mBodyShape.InitializeSphere(maxSphereSize);
