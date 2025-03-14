@@ -59,7 +59,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
   (compiling source file 'WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../../VGP330/13_HelloPostProcessing/WinMain.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):

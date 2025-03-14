@@ -5,6 +5,7 @@ using namespace ENgines::Math;
 using namespace ENgines::Graphics;
 using namespace ENgines::Core;
 using namespace ENgines::Input;
+using namespace ENgines::Physics;
 
 void GameState::Initialize()
 {
@@ -23,34 +24,85 @@ void GameState::Initialize()
 	mStandardEffect.SetCamera(mCamera);
 	mStandardEffect.SetDirectionalLight(mDirectionalLight);
 
-	mCharacter.Initialize(L"../../Assets/Models/Remy/Remy.model", &mCharacterAnimator);
-	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/Capoeira.model");
-	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/OldMan.model");
-	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/TwistDance.model");
-	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/PainGesture.model");
-	mCharacterAnimator.Initialize(mCharacter.modelId);
+	Mesh ball = MeshBuilder::CreateSphere(60, 60, 0.5f);
+	mBall.meshBuffer.Initialize(ball);
+	mBall.diffuseMapId = TextureCache::Get()->LoadTexture("misc/basketball.jpg");
 
-	Mesh groundMesh = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
-	mGround.meshBuffer.Initialize(groundMesh);
-	mGround.diffuseMapId = TextureCache::Get()->LoadTexture(L"misc/concrete.jpg");
-	mGround.material.ambient = { 0.3f, 0.3f, 0.3f, 1.0f };
-	mGround.material.diffuse = { 0.8f, 0.8f, 0.8f, 1.0f };
-	mGround.material.specular = { 0.9f, 0.9f, 0.9f, 1.0f };
-	mGround.material.power = 20.0f;
+	mBallShape.InitializeSphere(0.5f);
+	mBallRB.Initialize(mBall.transform, mBallShape, 1.0f);
+
+	Mesh ground = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
+	mGround.meshBuffer.Initialize(ground);
+	mGround.diffuseMapId = TextureCache::Get()->LoadTexture("misc/concrete.jpg");
+
+	mGroundShape.InitializeHull({ 5.0f, 0.5f, 5.0f }, { 0.0f, -0.5f, 0.0f });
+	mGroundRB.Initialize(mGround.transform, mGroundShape);
+
+	Mesh boxShape = MeshBuilder::CreateCube(1.0f);
+	TextureId boxTexture = TextureCache::Get()->LoadTexture(L"misc/basketball.jpg");
+
+	float y = 4.0f;
+	float x = 0.0f;
+	int row = 1;
+	int box = 0;
+	mBoxes.resize(10);
+	while (box < 10)
+	{
+		x = -((static_cast<float>(row) - 1.0f) * 0.5f);
+		for (int r = 0; r < row; ++r)
+		{
+			BoxData& newBox = mBoxes[box];
+			newBox.box.meshBuffer.Initialize(boxShape);
+			newBox.box.diffuseMapId = boxTexture;
+			newBox.box.transform.position.x = x;
+			newBox.box.transform.position.y = y;
+			newBox.box.transform.position.z = 4.0f;
+			newBox.boxShape.InitializeBox({ 0.5f, 0.5f, 0.5f });
+			x += 1.0f;
+			++box;
+		}
+		y -= 1.0f;
+		row += 1;
+	}
+
+	for (BoxData& box : mBoxes)
+	{
+		box.boxRB.Initialize(box.box.transform, box.boxShape, 1.0f);
+	}
 }
 
 void GameState::Terminate()
 {
+	for (BoxData& box : mBoxes)
+	{
+		box.boxRB.Terminate();
+		box.boxShape.Terminate();
+	}
+
+	mGroundRB.Terminate();
+	mGroundShape.Terminate();
+	mBallRB.Terminate();
+	mBallShape.Terminate();
 	mGround.Terminate();
-	mCharacter.Terminate();
+	mBall.Terminate();
 	mStandardEffect.Terminate();
 }
-
 
 void GameState::Update(float deltaTime)
 {
 	UpdateCamera(deltaTime);
-	mCharacterAnimator.Update(deltaTime);
+
+	if (InputSystem::Get()->IsKeyPressed(KeyCode::SPACE))
+	{
+		mBallRB.SetVelocity({ 0.0f, 10.0f, 0.0f });
+	}
+
+	if (InputSystem::Get()->IsMousePressed(MouseButton::LBUTTON))
+	{
+		Math::Vector3 spawnPos = mCamera.GetPosition() + mCamera.GetDirection() * 0.5f;
+		mBallRB.SetPosition(spawnPos);
+		mBallRB.SetVelocity(mCamera.GetDirection() * 20.0f);
+	}
 }
 
 void GameState::UpdateCamera(float deltaTime)
@@ -89,20 +141,17 @@ void GameState::UpdateCamera(float deltaTime)
 	}
 }
 
+bool checkBox = true;
+
 void GameState::Render()
 {
 	mStandardEffect.Begin();
-	if (mShowSkeleton)
-	{
-		AnimationUtil::BoneTransforms boneTransforms;
-		AnimationUtil::ComputeBoneTransforms(mCharacter.modelId, boneTransforms, &mCharacterAnimator);
-		AnimationUtil::DrawSkeleton(mCharacter.modelId, boneTransforms);
-	}
-	else
-	{
-		mStandardEffect.Render(mCharacter);
-	}
 	mStandardEffect.Render(mGround);
+	mStandardEffect.Render(mBall);
+	for (BoxData& box : mBoxes)
+	{
+		mStandardEffect.Render(box.box);
+	}
 	mStandardEffect.End();
 }
 
@@ -115,21 +164,13 @@ void GameState::DebugUI()
 		{
 			mDirectionalLight.direction = Normalize(mDirectionalLight.direction);
 		}
+
 		ImGui::ColorEdit4("Ambient##Light", &mDirectionalLight.ambient.r);
 		ImGui::ColorEdit4("Diffuse##Light", &mDirectionalLight.diffuse.r);
 		ImGui::ColorEdit4("Specular##Light", &mDirectionalLight.specular.r);
 	}
-
-
-	ImGui::Checkbox("ShowSkeleton", &mShowSkeleton);
-
-	int maxAnimations = mCharacterAnimator.GetAnimationCount();
-	if (ImGui::DragInt("AnimIndex", &mAnimationIndex, 1, -1, maxAnimations - 1))
-	{
-		mCharacterAnimator.PlayAnimation(mAnimationIndex, true);
-	}
 	mStandardEffect.DebugUI();
+	PhysicsWorld::Get()->DebugUI();
 	ImGui::End();
-
 	SimpleDraw::Render(mCamera);
 }

@@ -15,15 +15,6 @@ public:
 protected:
 	void UpdateCamera(float deltaTime);
 	ENgines::Graphics::Camera mCamera;
-	ENgines::Graphics::DirectionalLight mDirectionalLight;
-	ENgines::Graphics::StandardEffect mStandardEffect;
-	ENgines::Graphics::RenderObject mBall;
-	ENgines::Physics::CollisionShape mBallShape;
-	ENgines::Physics::RigidBody mBallRB;
-	ENgines::Graphics::RenderObject mGround;
-	ENgines::Physics::CollisionShape mGroundShape;
-	ENgines::Physics::RigidBody mGroundRB;
-	ENgines::Graphics::RenderObject mCloth;
-	ENgines::Graphics::Mesh mClothMesh;
-	ENgines::Physics::SoftBody mClothSoftBody;
+	ENgines::Graphics::ParticleSystemEffect mParticleSystemEffect;
+	ENgines::Physics::ParticleSystem mParticleSystem;
 };

@@ -1,75 +1,43 @@
-﻿C:\Users\LCV2312792\Desktop\GITHUB\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\LCV2312792\Desktop\GITHUB\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\LCV2312792\Desktop\GITHUB\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\LCV2312792\Desktop\GITHUB\Framework\Core\Core.vcxproj]
+﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Core\Core.vcxproj]
   GameState.cpp
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
   (compiling source file 'GameState.cpp')
   
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
-C:\Users\LCV2312792\Desktop\GITHUB\VGP334\22_HelloPhysics\GameState.cpp(126,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
-  C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
-  the template instantiation context (the oldest one first) is
-  	C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
-  	see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
           with
           [
               DBVTNODE=btDbvtNode
           ]
   
-C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file 'GameState.cpp')
-  C:\Users\LCV2312792\Desktop\GITHUB\Framework\Graphics\Inc\MeshBuffer.h(20,23):
-  the template instantiation context (the oldest one first) is
-  	C:\Users\LCV2312792\Desktop\GITHUB\VGP334\22_HelloPhysics\GameState.cpp(34,20):
-  	see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::Mesh>(const MeshType &)' being compiled
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\22_HelloPhysics\GameState.cpp(28,19):
+          see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::Mesh>(const MeshType &)' being compiled
           with
           [
               MeshType=ENgines::Graphics::Mesh
           ]
   
-  WinMain.cpp
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  
-C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
-  C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
-  the template instantiation context (the oldest one first) is
-  	C:\Users\LCV2312792\Desktop\GITHUB\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
-  	see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
-          with
-          [
-              DBVTNODE=btDbvtNode
-          ]
-  
-  Generating Code...
-  22_HelloPhysics.vcxproj -> C:\Users\LCV2312792\Desktop\GITHUB\x64\Debug\22_HelloPhysics.exe
+  22_HelloPhysics.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\22_HelloPhysics.exe

@@ -7,6 +7,7 @@ using namespace ENgines::Core;
 using namespace ENgines::Input;
 using namespace ENgines::Physics;
 
+
 void GameState::Initialize()
 {
 	mCamera.SetPosition({ 0.0f, 2.0f, -5.0f });
@@ -16,8 +17,6 @@ void GameState::Initialize()
 	mDirectionalLight.ambient = { 0.3f, 0.3f, 0.3f, 1.0f };
 	mDirectionalLight.diffuse = { 0.7f, 0.7f, 0.7f, 1.0f };
 	mDirectionalLight.specular = { 0.9f, 0.9f, 0.9f, 1.0f };
-
-	Mesh mesh = MeshBuilder::CreateSphere(300, 300, 1.0f);
 
 	std::filesystem::path shaderFile = L"../../Assets/Shaders/Standard.fx";
 	mStandardEffect.Initialize(shaderFile);
@@ -46,7 +45,7 @@ void GameState::Initialize()
 		v.position.y = 10.0f;
 	}
 	uint32_t lastVertex = mClothMesh.vertices.size() - 1;
-	uint32_t lastVertexOS = lastVertex - cols;	
+	uint32_t lastVertexOS = lastVertex - cols;	// OS -> Other Side
 	mClothSoftBody.Initialize(mClothMesh, 1.0f, { lastVertex, lastVertexOS });
 
 	mCloth.meshBuffer.Initialize(nullptr, sizeof(Vertex), mClothMesh.vertices.size(),

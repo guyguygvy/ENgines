@@ -1,153 +1,155 @@
 #include "Precompiled.h"
-#include "PhysicsWorld.h"
-#include "PhysicsObject.h"
+#include "ParticleSystem.h"
 
 using namespace ENgines;
 using namespace ENgines::Physics;
+using namespace ENgines::Graphics;
 
-namespace
+void ParticleSystem::Initialize(const ParticleSystemInfo& info)
 {
-	std::unique_ptr<PhysicsWorld> sPhysicsWorld;
+	mInfo = info;
+	mNextAvailableParticleIndex = 0;
+	mNextSpawnTime = info.delay;
+	mLifeTime = info.lifeTime;
+
+	InitializeParticles(info.maxParticles);
 }
 
-void PhysicsWorld::StaticInitialize(const Settings& settings)
+void ParticleSystem::InitializeParticles(uint32_t count)
 {
-	ASSERT(sPhysicsWorld == nullptr, "PhysicsWorld: is already initialized");
-	sPhysicsWorld = std::make_unique<PhysicsWorld>();
-	sPhysicsWorld->Initialize(settings);
-}
-
-void PhysicsWorld::StaticTerminate()
-{
-	if (sPhysicsWorld != nullptr)
+	mParticles.resize(count);
+	for (uint32_t i = 0; i < count; ++i)
 	{
-		sPhysicsWorld->Terminate();
-		sPhysicsWorld.reset();
+		mParticles[i] = std::make_unique<Particle>();
+		mParticles[i]->Initialize();
 	}
 }
 
-PhysicsWorld* PhysicsWorld::Get()
+void ParticleSystem::Terminate()
 {
-	ASSERT(sPhysicsWorld != nullptr, "PhysicsWorld: must be initialized");
-	return sPhysicsWorld.get();
-}
-
-PhysicsWorld::~PhysicsWorld()
-{
-	ASSERT(mDynamicsWorld == nullptr, "PhysicsWorld: must be terminated");
-}
-
-void PhysicsWorld::Initialize(const Settings& settings)
-{
-	mSettings = settings;
-
-	mInterface = new btDbvtBroadphase();
-	mSolver = new btSequentialImpulseConstraintSolver();
-#ifdef USE_SOFT_BODY
-	mCollisionConfiguration = new btSoftBodyRigidBodyCollisionConfiguration();
-	mDispatcher = new btCollisionDispatcher(mCollisionConfiguration);
-	mDynamicsWorld = new btSoftRigidDynamicsWorld(mDispatcher, mInterface, mSolver, mCollisionConfiguration);
-#else
-	mCollisionConfiguration = new btDefaultCollisionConfiguration();
-	mDispatcher = new btCollisionDispatcher(mCollisionConfiguration);
-	mDynamicsWorld = new btDiscreteDynamicsWorld(mDispatcher, mInterface, mSolver, mCollisionConfiguration);
-#endif
-	mDynamicsWorld->setGravity(TobtVector3(settings.gravity));
-	mDynamicsWorld->setDebugDrawer(&mPhysicsDebugDraw);
-}
-
-void PhysicsWorld::Terminate()
-{
-	SafeDelete(mDynamicsWorld);
-	SafeDelete(mSolver);
-	SafeDelete(mInterface);
-	SafeDelete(mDispatcher);
-	SafeDelete(mCollisionConfiguration);
-}
-
-void PhysicsWorld::Update(float deltaTime)
-{
-	mDynamicsWorld->stepSimulation(deltaTime, mSettings.simulationSteps, mSettings.fixedTimeStep);
-	for (PhysicsObject* po : mPhysicsObjects)
+	for (auto& particle : mParticles)
 	{
-		po->SyncWithGraphics();
+		particle->Terminate();
+		particle.reset();
 	}
+	mParticles.clear();
 }
 
-void PhysicsWorld::DebugUI()
+void ParticleSystem::Update(float deltaTime)
 {
-	if (ImGui::CollapsingHeader("Physics", ImGuiTreeNodeFlags_DefaultOpen))
+	if (IsActive())
 	{
-		if (ImGui::DragFloat3("Gravity", &mSettings.gravity.x, 0.1f))
+		mLifeTime -= deltaTime;
+		mNextSpawnTime -= deltaTime;
+
+		if (mNextSpawnTime <= 0.0f && mLifeTime > 0.0f)
 		{
-			mDynamicsWorld->setGravity(TobtVector3(mSettings.gravity));
+			SpawnParticles();
 		}
-		ImGui::Checkbox("DebugDraw", &mDebugDraw);
-		if (mDebugDraw)
+		for (auto& particle : mParticles)
 		{
-			ImGui::Indent();
-			int debugMode = mPhysicsDebugDraw.getDebugMode();
-			bool isEnabled = (debugMode & btIDebugDraw::DBG_DrawWireframe);
-			if (ImGui::Checkbox("WireFrame", &isEnabled))
-			{
-				debugMode = (isEnabled) ? debugMode | btIDebugDraw::DBG_DrawWireframe : debugMode & ~btIDebugDraw::DBG_DrawWireframe;
-			}
-			isEnabled = (debugMode & btIDebugDraw::DBG_DrawAabb);
-			if (ImGui::Checkbox("DrawAABB", &isEnabled))
-			{
-				debugMode = (isEnabled) ? debugMode | btIDebugDraw::DBG_DrawAabb : debugMode & ~btIDebugDraw::DBG_DrawAabb;
-			}
-			isEnabled = (debugMode & btIDebugDraw::DBG_DrawNormals);
-
-			mPhysicsDebugDraw.setDebugMode(debugMode);
-			mDynamicsWorld->debugDrawWorld();
-			ImGui::Unindent();
+			particle->Update(deltaTime);
 		}
 	}
 }
 
-void PhysicsWorld::Register(PhysicsObject* physicsObject)
+bool ParticleSystem::IsActive()
 {
-	auto iter = std::find(mPhysicsObjects.begin(), mPhysicsObjects.end(), physicsObject);
-	if (iter == mPhysicsObjects.end())	// if the item has not been added yet
+	if (mLifeTime > 0.0f)
 	{
-		mPhysicsObjects.push_back(physicsObject);
-#ifdef USE_SOFT_BODY
-		if (physicsObject->GetSoftBody())
+		return true;
+	}
+	for (auto& particle : mParticles)
+	{
+		if (particle->IsActive())
 		{
-			mDynamicsWorld->addSoftBody(physicsObject->GetSoftBody());
+			return true;
 		}
-#endif // USE_SOFT_BODY
+	}
+	return false;
+}
 
-		if (physicsObject->GetRigidBody())
+void ParticleSystem::DebugUI()
+{
+	if (ImGui::CollapsingHeader("ParticleSystem"))
+	{
+		ImGui::DragFloat3("Position", &mInfo.spawnPosition.x);
+		if (ImGui::DragFloat3("Direction", &mInfo.spawnDirection.x))
 		{
-			mDynamicsWorld->addRigidBody(physicsObject->GetRigidBody());
+			mInfo.spawnDirection = Math::Normalize(mInfo.spawnDirection);
+		}
+
+		ImGui::DragIntRange2("PerEmit", &mInfo.particlesPerEmit.min, &mInfo.particlesPerEmit.max);
+		ImGui::DragFloatRange2("TimeBetweenEmit", &mInfo.timeBetweenEmit.min, &mInfo.timeBetweenEmit.max);
+		ImGui::DragFloatRange2("SpawnAngle", &mInfo.spawnAngle.min, &mInfo.spawnAngle.max);
+		ImGui::DragFloatRange2("SpawnSpeed", &mInfo.spawnSpeed.min, &mInfo.spawnSpeed.max);
+		ImGui::DragFloatRange2("SpawnLifeTime", &mInfo.spawnLifeTime.min, &mInfo.spawnLifeTime.max);
+		ImGui::DragFloat3("StartScaleMin", &mInfo.startScale.min.x);
+		ImGui::DragFloat3("StartScaleMax", &mInfo.startScale.max.x);
+		ImGui::DragFloat3("EndScaleMin", &mInfo.endScale.min.x);
+		ImGui::DragFloat3("EndScaleMax", &mInfo.endScale.max.x);
+		ImGui::ColorEdit4("StartColorMin", &mInfo.startColor.min.r);
+		ImGui::ColorEdit4("StartColorMax", &mInfo.startColor.max.r);
+		ImGui::ColorEdit4("EndColorMin", &mInfo.endColor.min.r);
+		ImGui::ColorEdit4("EndColorMax", &mInfo.endColor.max.r);
+	}
+}
+
+void ParticleSystem::SetPosition(const Math::Vector3& position)
+{
+	mInfo.spawnPosition = position;
+}
+
+void ParticleSystem::SpawnParticles()
+{
+	int numParticles = mInfo.particlesPerEmit.GetRandomInclusive();
+	for (int i = 0; i < numParticles; ++i)
+	{
+		SpawnSingleParticle();
+	}
+
+	mNextSpawnTime = mInfo.timeBetweenEmit.GetRandom();
+}
+
+void ParticleSystem::Render(Graphics::ParticleSystemEffect& effect)
+{
+	if (!IsActive())
+	{
+		return;
+	}
+	effect.SetTextureID(mInfo.textureId);
+	for (auto& particle : mParticles)
+	{
+		if (particle->IsActive())
+		{
+			effect.Render(particle->GetTransform(), particle->GetColor());
 		}
 	}
 }
 
-void PhysicsWorld::Unregister(PhysicsObject* physicsObject)
+void ParticleSystem::SpawnSingleParticle()
 {
-	auto iter = std::find(mPhysicsObjects.begin(), mPhysicsObjects.end(), physicsObject);
-	if (iter != mPhysicsObjects.end())
-	{
-#ifdef USE_SOFT_BODY
-		if (physicsObject->GetSoftBody())
-		{
-			mDynamicsWorld->removeSoftBody(physicsObject->GetSoftBody());
-		}
-#endif // USE_SOFT_BODY
+	Particle* particle = mParticles[mNextAvailableParticleIndex].get();
+	mNextAvailableParticleIndex = (mNextAvailableParticleIndex + 1) % mInfo.maxParticles;
 
-		if (physicsObject->GetRigidBody())
-		{
-			mDynamicsWorld->removeRigidBody(physicsObject->GetRigidBody());
-		}
-		mPhysicsObjects.erase(iter);
-	}
-}
+	const bool isUp = (abs(Math::Dot(mInfo.spawnDirection, Math::Vector3::YAxis))) > 0.9999f;
+	Math::Vector3 r = (isUp) ? Math::Vector3::XAxis : Math::Normalize(Math::Cross(Math::Vector3::YAxis, mInfo.spawnDirection));
+	Math::Vector3 u = (isUp) ? Math::Vector3::ZAxis : Math::Normalize(Math::Cross(mInfo.spawnDirection, r));
 
-void PhysicsWorld::SetGravity(const ENgines::Math::Vector3& gravity)
-{
-	mSettings.gravity = gravity;
-	mDynamicsWorld->setGravity(TobtVector3(gravity));
+	float rotAngle = mInfo.spawnAngle.GetRandom() * Math::Constants::DegToRad;
+	Math::Matrix4 matRotRight = Math::Matrix4::RotationAxis(r, rotAngle);
+
+	rotAngle = mInfo.spawnAngle.GetRandom() * Math::Constants::DegToRad;
+	Math::Matrix4 matRotUp = Math::Matrix4::RotationAxis(u, rotAngle);
+	Math::Matrix4 matRotation = matRotRight * matRotUp;
+	Math::Vector3 spawnDirection = Math::TransformCoord(mInfo.spawnDirection, matRotation);
+
+	const float speed = mInfo.spawnSpeed.GetRandom();
+	ParticleInfo info;
+	info.lifeTime = mInfo.spawnLifeTime.GetRandom();
+	info.startColor = mInfo.startColor.GetRandom();
+	info.endColor = mInfo.endColor.GetRandom();
+	info.startScale = mInfo.startScale.GetRandom();
+	info.endScale = mInfo.endScale.GetRandom();
+	particle->Activate(info, mInfo.spawnPosition, spawnDirection * speed);
 }
