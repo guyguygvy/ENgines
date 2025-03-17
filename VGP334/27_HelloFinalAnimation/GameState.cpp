@@ -10,7 +10,7 @@ using namespace ENgines::Audio;
 void GameState::Initialize()
 {
 	mCamera.SetPosition({ 0.0f, 2.0f, -5.0f });
-	mCamera.SetLookAt({ 0.0f, 1.0f, 0.0f });
+	mCamera.SetLookAt({ 0.0f, 3.0f, 0.0f });
 
 	mDirectionalLight.direction = Normalize({ 1.0f, -1.0f, 1.0f });
 	mDirectionalLight.ambient = { 0.3f, 0.3f, 0.3f, 1.0f };
@@ -40,6 +40,13 @@ void GameState::Initialize()
 	AnimationKeyEvent ake;
 	ake.SetIndex(2);
 
+	Mesh wall = MeshBuilder::CreateGroundPlane(15,15,1.0f);
+	mWall.meshBuffer.Initialize(wall);
+	mWall.diffuseMapId = TextureCache::Get()->LoadTexture("misc/kazooya.png");
+	Mesh wall2 = MeshBuilder::CreateGroundPlane(20,20,1.0f);
+	mWall2.meshBuffer.Initialize(wall2);
+	mWall2.diffuseMapId = TextureCache::Get()->LoadTexture("misc/sad.png");
+
 	Mesh groundMesh = MeshBuilder::CreateGroundPlane(100, 100, 1.0f);
 	mGround.meshBuffer.Initialize(groundMesh);
 	mGround.diffuseMapId = TextureCache::Get()->LoadTexture(L"misc/concrete.jpg");
@@ -50,6 +57,7 @@ void GameState::Initialize()
 
 	mCharacterAnimation1 = AnimationBuilder()
 	.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 0.1f)
+		.AddEventKey(std::bind(&GameState::PlayMitaiSoundEvent, this), 0.1f)
 		.AddPositionKey({ 1.0f, 0.5f, 0.0f }, 0.4f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 10.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 20.0f)
@@ -60,9 +68,26 @@ void GameState::Initialize()
 		.AddEventKey(std::bind(&GameState::PlayBreakSoundEvent, this), 45.8f)
 		.AddEventKey(std::bind(&GameState::PlayAAASoundEvent, this), 46.1f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 46.7f)
-		.AddPositionKey({ 1.0f, 0.5f, -15.0f }, 47.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 48.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 53.0f)
+		.AddPositionKey({ 1.0f, 0.5f, 5.0f }, 80.0f)
+		.Build();
+	mWallAnimation = AnimationBuilder()
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 270.0f * Math::Constants::DegToRad), 0.1f)
+		//.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 90.0f * Math::Constants::DegToRad), 0.11f)
+		.AddPositionKey({ 0.0f, -15.0f, 10.0f }, 0.12f)
+		.AddPositionKey({ .0f, 5.0f, 10.0f }, 19.0f)
+		.AddPositionKey({ -2.0f, 5.0f, 10.0f }, 24.0f)
+		.AddPositionKey({ 2.0f, 5.0f, 10.0f }, 29.0f)
+		.AddPositionKey({ -2.0f, 5.0f, 10.0f }, 34.0f)
+		.AddPositionKey({ 2.0f, 5.0f, 10.0f }, 39.0f)
+		.AddPositionKey({ -2.0f, 5.0f, 10.0f }, 44.0f)
+		.AddPositionKey({ 2.0f, 5.0f, 10.0f }, 49.0f)
+		.Build();
+	mWallAnimation2 = AnimationBuilder()
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 270.0f * Math::Constants::DegToRad), 0.1f)
+		.AddPositionKey({ 0.0f, -15.0f, 9.9f }, 0.12f)
+		.AddPositionKey({ 0.0f, 7.0f, 9.9f }, 67.0f)
 		.Build();
 
 	mAnimationTime = 0.0f;
@@ -70,12 +95,15 @@ void GameState::Initialize()
 	EventManager* em = EventManager::Get();
 	mScreamEventId = SoundEffectManager::Get()->Load("goat.wav");
 	mBoneBreakEventId = SoundEffectManager::Get()->Load("bone-crack.wav");
+	mSadEventId = SoundEffectManager::Get()->Load("KazoMitai.wav");
 }
 
 void GameState::Terminate()
 {
 	mGround.Terminate();
 	mCharacter.Terminate();
+	mWall.Terminate();
+	mWall2.Terminate();
 	mStandardEffect.Terminate();
 }
 
@@ -90,6 +118,10 @@ void GameState::Update(float deltaTime)
 		mCharacterAnimation1.PlayEvent(prevTime, mAnimationTime);
 		Event event;
 		mCharacterAnimation1.PlayParameterEvent(prevTime, mAnimationTime, event);
+		while (mAnimationTime > mCharacterAnimation1.GetDuration())
+		{
+			mAnimationTime -= mCharacterAnimation1.GetDuration();
+		}
 	}
 
 	mCharacterAnimator.Update(deltaTime);
@@ -140,6 +172,11 @@ void GameState::PlayAAASoundEvent()
 	SoundEffectManager::Get()->Play(mScreamEventId);
 }
 
+void GameState::PlayMitaiSoundEvent()
+{
+	SoundEffectManager::Get()->Play(mSadEventId);
+}
+
 void GameState::PlayNextAnimation()
 {
 	mAnimationIndex++;
@@ -163,7 +200,11 @@ void GameState::Render()
 	{
 		mStandardEffect.Render(mCharacter);
 	}
+	mWall.transform = mWallAnimation.GetTransform(mAnimationTime);
+	mWall2.transform = mWallAnimation2.GetTransform(mAnimationTime);
 	mStandardEffect.Render(mGround);
+	mStandardEffect.Render(mWall);
+	mStandardEffect.Render(mWall2);
 	mStandardEffect.End();
 }
 

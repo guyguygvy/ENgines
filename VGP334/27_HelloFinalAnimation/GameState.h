@@ -18,6 +18,7 @@ protected:
 
 		void PlayBreakSoundEvent();
 		void PlayAAASoundEvent();
+		void PlayMitaiSoundEvent();
 
 	ENgines::Graphics::Camera mCamera;
 	ENgines::Graphics::DirectionalLight mDirectionalLight;
@@ -26,11 +27,17 @@ protected:
 	ENgines::Graphics::RenderGroup mCharacter2;
 	ENgines::Graphics::Animator mCharacterAnimator;
 	ENgines::Graphics::RenderObject mGround;
+	ENgines::Graphics::Animation mWallAnimation;
+	ENgines::Graphics::Animation mWallAnimation2;
 	ENgines::Graphics::Animation mCharacterAnimation1;
 	ENgines::Graphics::Animation mCharacterAnimation2;
+	ENgines::Graphics::RenderObject mWall;
+	ENgines::Graphics::RenderObject mWall2;
 
 	ENgines::Audio::SoundId mBoneBreakEventId = 0;
 	ENgines::Audio::SoundId mScreamEventId = 0;
+	ENgines::Audio::SoundId mSadEventId = 0;
+
 
 	bool mShowSkeleton = false;
 	float mAnimationTime = 0.0f;
