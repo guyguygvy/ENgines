@@ -7,7 +7,6 @@ using namespace ENgines::Core;
 using namespace ENgines::Input;
 using namespace ENgines::Physics;
 
-
 void GameState::Initialize()
 {
 	mCamera.SetPosition({ 0.0f, 2.0f, -5.0f });
@@ -50,7 +49,7 @@ void GameState::Initialize()
 
 	mCloth.meshBuffer.Initialize(nullptr, sizeof(Vertex), mClothMesh.vertices.size(),
 		mClothMesh.indices.data(), mClothMesh.indices.size());
-	mCloth.diffuseMapId = TextureCache::Get()->LoadTexture(L"misc/concrete.jpg");
+	mCloth.diffuseMapId = TextureCache::Get()->LoadTexture(L"misc/dsmple.bmp");
 }
 
 void GameState::Terminate()
