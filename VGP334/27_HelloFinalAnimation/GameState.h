@@ -34,6 +34,9 @@ protected:
 	ENgines::Graphics::RenderObject mWall;
 	ENgines::Graphics::RenderObject mWall2;
 
+	ENgines::Graphics::ParticleSystemEffect mParticleSystemEffect;
+	ENgines::Physics::ParticleSystem mParticleSystem;
+
 	ENgines::Audio::SoundId mBoneBreakEventId = 0;
 	ENgines::Audio::SoundId mScreamEventId = 0;
 	ENgines::Audio::SoundId mSadEventId = 0;
