@@ -29,9 +29,35 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
               DBVTNODE=btDbvtNode
           ]
   
-GameState.obj : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::ParticleSystem::Initialize(struct ENgines::Physics::ParticleSystemInfo const &)" (?Initialize@ParticleSystem@Physics@ENgines@@QEAAXAEBUParticleSystemInfo@23@@Z) referenced in function "public: virtual void __cdecl GameState::Initialize(void)" (?Initialize@GameState@@UEAAXXZ)
-GameState.obj : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::ParticleSystem::Terminate(void)" (?Terminate@ParticleSystem@Physics@ENgines@@QEAAXXZ) referenced in function "public: virtual void __cdecl GameState::Terminate(void)" (?Terminate@GameState@@UEAAXXZ)
-GameState.obj : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::ParticleSystem::Update(float)" (?Update@ParticleSystem@Physics@ENgines@@QEAAXM@Z) referenced in function "public: virtual void __cdecl GameState::Update(float)" (?Update@GameState@@UEAAXM@Z)
-GameState.obj : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::ParticleSystem::DebugUI(void)" (?DebugUI@ParticleSystem@Physics@ENgines@@QEAAXXZ) referenced in function "public: virtual void __cdecl GameState::DebugUI(void)" (?DebugUI@GameState@@UEAAXXZ)
-GameState.obj : error LNK2019: unresolved external symbol "public: void __cdecl ENgines::Physics::ParticleSystem::Render(class ENgines::Graphics::ParticleSystemEffect &)" (?Render@ParticleSystem@Physics@ENgines@@QEAAXAEAVParticleSystemEffect@Graphics@3@@Z) referenced in function "public: virtual void __cdecl GameState::Render(void)" (?Render@GameState@@UEAAXXZ)
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\24_HelloParticleEffect.exe : fatal error LNK1120: 5 unresolved externals
+  WinMain.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
+  
+  Generating Code...
+  24_HelloParticleEffect.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\24_HelloParticleEffect.exe

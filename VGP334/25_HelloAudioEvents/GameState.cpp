@@ -9,7 +9,6 @@ using namespace ENgines::Audio;
 
 void GameState::Initialize()
 {
-	// Make Baseball swing hitting a ball
 	mCamera.SetPosition({ 0.0f, 2.0f, -5.0f });
 	mCamera.SetLookAt({ 0.0f, 1.0f, 0.0f });
 
@@ -78,7 +77,6 @@ void GameState::Initialize()
 	mGunEventId = SoundEffectManager::Get()->Load("photongun1.wav");
 	mLaserGunEventId = SoundEffectManager::Get()->Load("megamanx_blast.wav");
 	mExplosionEventId = SoundEffectManager::Get()->Load("explosion.wav");
-	mHonseEventId = SoundEffectManager::Get()->Load("honse.wav");
 }
 
 void GameState::Terminate()
@@ -162,14 +160,7 @@ void GameState::OnMoveEvent()
 
 void GameState::OnSpacePressedEvent(const ENgines::Event& e) const
 {
-	LOG("HEY THE SPACE WAS PRESSED");
 	SoundEffectManager::Get()->Play(mGunEventId);
-}
-
-void GameState::OnMKeyPressedEvent(const ENgines::Event& e) const
-{
-	LOG("HEY THE M key WAS PRESSED");
-	SoundEffectManager::Get()->Play(mHonseEventId);
 }
 
 void GameState::PlayerLaserGunSoundEvent()
