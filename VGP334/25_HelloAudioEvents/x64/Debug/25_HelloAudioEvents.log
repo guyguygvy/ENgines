@@ -40,5 +40,4 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshB
               MeshType=ENgines::Graphics::Mesh
           ]
   
-GameState.obj : error LNK2019: unresolved external symbol "protected: void __cdecl GameState::OnMKeyPressedEvent(class ENgines::Event const &)const " (?OnMKeyPressedEvent@GameState@@IEBAXAEBVEvent@ENgines@@@Z) referenced in function "public: virtual void __cdecl GameState::Initialize(void)" (?Initialize@GameState@@UEAAXXZ)
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\25_HelloAudioEvents.exe : fatal error LNK1120: 1 unresolved externals
+  25_HelloAudioEvents.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\25_HelloAudioEvents.exe

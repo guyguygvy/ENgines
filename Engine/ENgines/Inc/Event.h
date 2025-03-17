@@ -6,7 +6,7 @@ namespace ENgines
 	{
 		None,
 		SpacePressed,
-		MKeyPressed,
+		LShiftPressed,
 		AnimationKey
 	};
 
@@ -29,10 +29,10 @@ namespace ENgines
 		SpacePressedEvent() : Event(EventType::SpacePressed) {}
 	};
 
-	class MKeyPressedEvent : public Event
+	class LShiftPressedEvent : public Event
 	{
 	public:
-		MKeyPressedEvent() : Event(EventType::MKeyPressed) {}
+		LShiftPressedEvent() : Event(EventType::LShiftPressed) {}
 	};
 	class AnimationKeyEvent : public Event
 	{

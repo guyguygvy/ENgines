@@ -35,54 +35,51 @@ void GameState::Initialize()
 	mAnimationTime = 0.0f;
 
 	mAnimation = AnimationBuilder()
-		.AddPositionKey({ 0.0f, 0.5f, 0.0f }, 0.0f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 0.0f)
-		.AddRotationKey(Quaternion::Identity, 0.0f)
-		.AddScaleKey({ 0.1f, 0.1f, 0.1f }, 0.0f)
-		.AddPositionKey({ 0.0f, 1.0f, 0.0f }, 0.5f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 0.5f)
+		.AddScaleKey({ 1.0f, 0.5f, 1.0f }, 0.0f)
+		.AddPositionKey({ 0.0f, 0.5f, -3.0f }, 0.0f)
 		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 90.0f * Math::Constants::DegToRad), 0.5f)
-		.AddPositionKey({ 0.0f, 1.0f, 0.0f }, 0.75f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 0.75f)
-		.AddScaleKey({ 1.0f, 1.0f, 1.0f }, 1.0f)
-		.AddPositionKey({ 0.0f, 1.0f, 1.0f }, 1.25f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 1.25f)
-		.AddPositionKey({ 0.0f, 1.0f, 1.0f }, 1.5f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 1.5f)
+		.AddEventKey(std::bind(&GameState::PlayBlastSoundEvent, this), 0.5f)
+		.AddPositionKey({ 0.0f, 2.5f, 0.0f }, 1.0f)
 		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 180.0f * Math::Constants::DegToRad), 1.5f)
-		.AddPositionKey({ 1.0f, 1.0f, 1.0f }, 2.0f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 2.0f)
-		.AddPositionKey({ 1.0f, 1.0f, 1.0f }, 2.25f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 2.25f)
-		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 270.0f * Math::Constants::DegToRad), 2.25f)
-		.AddPositionKey({ 0.0f, 1.0f, 1.0f }, 2.75f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 2.75f)
-		.AddPositionKey({ 0.0f, 1.0f, 1.0f }, 3.0f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 3.0f)
-		.AddPositionKey({ 0.0f, 1.0f, 0.0f }, 3.5f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 3.5f)
-		.AddPositionKey({ 0.0f, 1.0f, 0.0f }, 3.75f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 3.75f)
-		.AddPositionKey({ 0.0f, 0.5f, 0.0f }, 4.25f)
-		.AddEventKey(std::bind(&GameState::PlayerLaserGunSoundEvent, this), 4.25f)
-		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 359.0f * Math::Constants::DegToRad), 4.25f)
-		.AddScaleKey({ 0.1f, 0.1f, 0.1f }, 4.25f)
-		.AddEventKey(std::bind(&GameState::OnMoveEvent, this), 4.25f)
+		.AddEventKey(std::bind(&GameState::PlayExplosionSoundEvent, this), 1.5f)
+		.AddPositionKey({ 0.0f, 0.5f, 3.0f }, 2.0f)
+		.AddScaleKey({ 1.0f, 1.0f, 0.5f }, 2.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 90.0f * Math::Constants::DegToRad), 2.5f)
+		.AddEventKey(std::bind(&GameState::PlayBlastSoundEvent, this), 2.5f)
+		.AddPositionKey({ 1.5f, 2.5f, 1.5f }, 3.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 180.0f * Math::Constants::DegToRad), 3.5f)
+		.AddEventKey(std::bind(&GameState::PlayExplosionSoundEvent, this), 3.5f)
+		.AddPositionKey({ 3.0f, 0.5f, 0.0f }, 4.0f)
+		.AddScaleKey({ 0.5f, 1.0f, 1.0f }, 4.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 90.0f * Math::Constants::DegToRad), 4.5f)
+		.AddEventKey(std::bind(&GameState::PlayBlastSoundEvent, this), 4.5f)
+		.AddPositionKey({ 0.0f, 2.5f, 0.0f }, 5.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 180.0f * Math::Constants::DegToRad), 5.5f)
+		.AddEventKey(std::bind(&GameState::PlayExplosionSoundEvent, this), 5.5f)
+		.AddPositionKey({ -3.0f, 0.5f, 0.0f }, 6.0f)
+		.AddScaleKey({ 1.0f, 1.0f, 0.5f }, 6.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 90.0f * Math::Constants::DegToRad), 6.5f)
+		.AddEventKey(std::bind(&GameState::PlayBlastSoundEvent, this), 6.5f)
+		.AddPositionKey({ -1.5f, 2.5f, -1.5f }, 7.0f)
+		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 180.0f * Math::Constants::DegToRad), 7.5f)
+		.AddEventKey(std::bind(&GameState::PlayExplosionSoundEvent, this), 7.5f)
+		.AddPositionKey({ 0.0f, 0.5f, -3.0f }, 8.0f)
+		.AddScaleKey({ 1.0f, 0.5f, 1.0f }, 8.0f)
 		.Build();
 
 	EventManager* em = EventManager::Get();
 	mSpacePressedEventId = em->AddListener(EventType::SpacePressed, std::bind(&GameState::OnSpacePressedEvent, this, std::placeholders::_1));
-	mMKeyPressedEventId = em->AddListener(EventType::MKeyPressed, std::bind(&GameState::OnMKeyPressedEvent, this, std::placeholders::_1));
+	mLShiftPressedEventId = em->AddListener(EventType::LShiftPressed, std::bind(&GameState::OnLShiftPressedEvent, this, std::placeholders::_1));
 
-	mGunEventId = SoundEffectManager::Get()->Load("photongun1.wav");
-	mLaserGunEventId = SoundEffectManager::Get()->Load("megamanx_blast.wav");
+	mShotEventId = SoundEffectManager::Get()->Load("megamanx_shot.wav");
+	mBlastEventId = SoundEffectManager::Get()->Load("megamanx_blast.wav");
 	mExplosionEventId = SoundEffectManager::Get()->Load("explosion.wav");
+	mGoatEventId = SoundEffectManager::Get()->Load("goat.wav");
 }
 
 void GameState::Terminate()
 {
 	EventManager::Get()->RemoveListener(EventType::SpacePressed, mSpacePressedEventId);
-	EventManager::Get()->RemoveListener(EventType::MKeyPressed, mHonseEventId);
 	mGround.Terminate();
 	mBall.Terminate();
 	mStandardEffect.Terminate();
@@ -108,11 +105,10 @@ void GameState::Update(float deltaTime)
 		SpacePressedEvent spe;
 		EventManager::Broadcast(spe);
 	}
-
-	if (InputSystem::Get()->IsKeyPressed(KeyCode::M))
+	if (InputSystem::Get()->IsKeyPressed(KeyCode::LSHIFT))
 	{
-		MKeyPressedEvent mkpe;
-		EventManager::Broadcast(mkpe);
+		LShiftPressedEvent spe2;
+		EventManager::Broadcast(spe2);
 	}
 }
 
@@ -160,12 +156,21 @@ void GameState::OnMoveEvent()
 
 void GameState::OnSpacePressedEvent(const ENgines::Event& e) const
 {
-	SoundEffectManager::Get()->Play(mGunEventId);
+	SoundEffectManager::Get()->Play(mShotEventId);
 }
 
-void GameState::PlayerLaserGunSoundEvent()
+void GameState::OnLShiftPressedEvent(const ENgines::Event& e) const
 {
-	SoundEffectManager::Get()->Play(mLaserGunEventId);
+	SoundEffectManager::Get()->Play(mGoatEventId);
+}
+
+void GameState::PlayBlastSoundEvent()
+{
+	SoundEffectManager::Get()->Play(mBlastEventId);
+}
+void GameState::PlayExplosionSoundEvent()
+{
+	SoundEffectManager::Get()->Play(mExplosionEventId);
 }
 
 bool checkBox = true;

@@ -16,8 +16,9 @@ protected:
 	void UpdateCamera(float deltaTime);
 	void OnMoveEvent();
 	void OnSpacePressedEvent(const ENgines::Event& e) const;
-	void OnMKeyPressedEvent(const ENgines::Event& e) const;
-	void PlayerLaserGunSoundEvent();
+	void OnLShiftPressedEvent(const ENgines::Event& e) const;
+	void PlayBlastSoundEvent();
+	void PlayExplosionSoundEvent();
 
 	ENgines::Graphics::Camera mCamera;
 	ENgines::Graphics::RenderObject mBall;
@@ -27,13 +28,12 @@ protected:
 
 	ENgines::Math::Vector3 mOffset = { 0.0f, 0.0f, 0.0f };
 	ENgines::ListenerId mSpacePressedEventId = 0;
-	ENgines::ListenerId mMKeyPressedEventId = 0;
-	ENgines::Audio::SoundId mGunEventId = 0;
-	ENgines::Audio::SoundId mLaserGunEventId = 0;
+	ENgines::ListenerId mLShiftPressedEventId = 0;
+	ENgines::Audio::SoundId mShotEventId = 0;
+	ENgines::Audio::SoundId mBlastEventId = 0;
 	ENgines::Audio::SoundId mExplosionEventId = 0;
-	ENgines::Audio::SoundId mHonseEventId = 0;
+	ENgines::Audio::SoundId mGoatEventId = 0;
 
-	// animation
 	ENgines::Graphics::Animation mAnimation;
 	float mAnimationTime = 0.0f;
 };
