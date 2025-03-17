@@ -5,6 +5,7 @@ using namespace ENgines::Math;
 using namespace ENgines::Graphics;
 using namespace ENgines::Core;
 using namespace ENgines::Input;
+using namespace ENgines::Audio;
 
 void GameState::Initialize()
 {
@@ -24,19 +25,51 @@ void GameState::Initialize()
 	mStandardEffect.SetDirectionalLight(mDirectionalLight);
 
 	mCharacter.Initialize(L"../../Assets/Models/Remy/Remy.model", &mCharacterAnimator);
-	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/Capoeira.model");
-	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/OldMan.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/SillyDancing.model");
 	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/TwistDance.model");
-	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/PainGesture.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/SillyDancing.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/TwistDance.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/HouseDancing.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/ChickenDance.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/BackFlip.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/FallingFlatImpact.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/StandUp.model");
+	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/Dying.model");
 	mCharacterAnimator.Initialize(mCharacter.modelId);
 
-	Mesh groundMesh = MeshBuilder::CreateGroundPlane(10, 10, 1.0f);
+	AnimationKeyEvent ake;
+	ake.SetIndex(2);
+
+	Mesh groundMesh = MeshBuilder::CreateGroundPlane(100, 100, 1.0f);
 	mGround.meshBuffer.Initialize(groundMesh);
 	mGround.diffuseMapId = TextureCache::Get()->LoadTexture(L"misc/concrete.jpg");
 	mGround.material.ambient = { 0.3f, 0.3f, 0.3f, 1.0f };
 	mGround.material.diffuse = { 0.8f, 0.8f, 0.8f, 1.0f };
 	mGround.material.specular = { 0.9f, 0.9f, 0.9f, 1.0f };
 	mGround.material.power = 20.0f;
+
+	mCharacterAnimation1 = AnimationBuilder()
+	.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 0.1f)
+		.AddPositionKey({ 1.0f, 0.5f, 0.0f }, 0.4f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 10.0f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 20.0f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 27.0f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 35.0f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 40.0f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 45.0f)
+		.AddEventKey(std::bind(&GameState::PlayBreakSoundEvent, this), 45.8f)
+		.AddEventKey(std::bind(&GameState::PlayAAASoundEvent, this), 46.1f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 46.7f)
+		.AddPositionKey({ 1.0f, 0.5f, -15.0f }, 47.0f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 48.0f)
+		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 53.0f)
+		.Build();
+
+	mAnimationTime = 0.0f;
+
+	EventManager* em = EventManager::Get();
+	mScreamEventId = SoundEffectManager::Get()->Load("goat.wav");
+	mBoneBreakEventId = SoundEffectManager::Get()->Load("bone-crack.wav");
 }
 
 void GameState::Terminate()
@@ -50,6 +83,15 @@ void GameState::Terminate()
 void GameState::Update(float deltaTime)
 {
 	UpdateCamera(deltaTime);
+	if (mCharacterAnimation1.GetDuration() > 0.0f)
+	{
+		float prevTime = mAnimationTime;
+		mAnimationTime += deltaTime;
+		mCharacterAnimation1.PlayEvent(prevTime, mAnimationTime);
+		Event event;
+		mCharacterAnimation1.PlayParameterEvent(prevTime, mAnimationTime, event);
+	}
+
 	mCharacterAnimator.Update(deltaTime);
 }
 
@@ -89,6 +131,25 @@ void GameState::UpdateCamera(float deltaTime)
 	}
 }
 
+void GameState::PlayBreakSoundEvent()
+{
+	SoundEffectManager::Get()->Play(mBoneBreakEventId);
+}
+void GameState::PlayAAASoundEvent()
+{
+	SoundEffectManager::Get()->Play(mScreamEventId);
+}
+
+void GameState::PlayNextAnimation()
+{
+	mAnimationIndex++;
+	if (mAnimationIndex >= mCharacterAnimator.GetAnimationCount())
+	{
+		mAnimationIndex = 0;
+	}
+	mCharacterAnimator.PlayAnimation(mAnimationIndex, true);
+}
+
 void GameState::Render()
 {
 	mStandardEffect.Begin();
@@ -124,10 +185,6 @@ void GameState::DebugUI()
 	ImGui::Checkbox("ShowSkeleton", &mShowSkeleton);
 
 	int maxAnimations = mCharacterAnimator.GetAnimationCount();
-	if (ImGui::DragInt("AnimIndex", &mAnimationIndex, 1, -1, maxAnimations - 1))
-	{
-		mCharacterAnimator.PlayAnimation(mAnimationIndex, true);
-	}
 	mStandardEffect.DebugUI();
 	ImGui::End();
 

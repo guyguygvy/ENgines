@@ -1,7 +1,14 @@
 -scale 0.01 ../../Assets/Models/Abe/Abe.fbx ../../Assets/Models/Abe/Abe.model
 -scale 0.01 ../../Assets/Models/Man/Man.fbx ../../Assets/Models/Man/Man.model
 -scale 0.01 ../../Assets/Models/Remy/Remy.fbx ../../Assets/Models/Remy/Remy.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/Dying.fbx ../../Assets/Models/Remy/Dying.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/Capoeira.fbx ../../Assets/Models/Remy/Capoeira.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/OldManIdle.fbx ../../Assets/Models/Remy/OldManIdle.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/TwistDance.fbx ../../Assets/Models/Remy/TwistDance.model
--scale 0.01 -animOnly 1 ../../Assets/Models/Remy/PainGesture.fbx ../../Assets/Models/Remy/PainGesture.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/SillyDancing.fbx ../../Assets/Models/Remy/SillyDancing.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/Backflip.fbx ../../Assets/Models/Remy/Backflip.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/FallingFlatImpact.fbx ../../Assets/Models/Remy/FallingFlatImpact.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/FallingFlatImpact2.fbx ../../Assets/Models/Remy/FallingFlatImpact2.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/StandUp.fbx ../../Assets/Models/Remy/StandUp.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/ChickenDance.fbx ../../Assets/Models/Remy/ChickenDance.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/Remy/HouseDancing.fbx ../../Assets/Models/Remy/HouseDancing.model
