@@ -25,11 +25,11 @@ void GameState::Initialize()
 	mStandardEffect.SetCamera(mCamera);
 	mStandardEffect.SetDirectionalLight(mDirectionalLight);
 
-	/*mParticleSystemEffect.Initialize();
+	mParticleSystemEffect.Initialize();
 
-	mParticleSystemEffect.SetCamera(mCamera);*/
+	mParticleSystemEffect.SetCamera(mCamera);
 
-	/*ParticleSystemInfo info;
+	ParticleSystemInfo info;
 	info.textureId = TextureCache::Get()->LoadTexture("misc/tears.png");
 	int maxParticles = 100;
 	info.particlesPerEmit = { 1, 4 };
@@ -45,7 +45,7 @@ void GameState::Initialize()
 	info.endScale = { Math::Vector3::One, Math::Vector3::One };
 	info.startColor = { Colors::White, Colors::White };
 	info.endColor = { Colors::White, Colors::White };
-	mParticleSystem.Initialize(info);*/
+	mParticleSystem.Initialize(info);
 
 	mCharacter.Initialize(L"../../Assets/Models/Remy/Remy.model", &mCharacterAnimator);
 	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/SillyDancing.model");
@@ -103,7 +103,7 @@ void GameState::Initialize()
 		.AddPositionKey({ 0.0f, 0.0f, 3.0f }, 46.81f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 48.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 53.0f)
-		.AddPositionKey({ 0.0f, 0.0f, 3.0f }, 89.0f)
+		.AddPositionKey({ 0.0f, 0.0f, 3.0f }, 88.0f)
 		.Build();
 
 	mCharacterAnimation2 = AnimationBuilder()
@@ -146,14 +146,14 @@ void GameState::Initialize()
 
 void GameState::Terminate()
 {
+	mParticleSystem.Terminate();
+	mParticleSystemEffect.Terminate();
 	mGround.Terminate();
 	mCharacter.Terminate();
 	mCharacter2.Terminate();
 	mCharacter3.Terminate();
 	mWall.Terminate();
 	mWall2.Terminate();
-	/*mParticleSystem.Terminate();
-	mParticleSystemEffect.Terminate();*/
 	mStandardEffect.Terminate();
 }
 
@@ -186,7 +186,7 @@ void GameState::Update(float deltaTime)
 		Event event;
 		mCharacterAnimation3.PlayParameterEvent(prevTime, mAnimationTime, event);
 	}
-	//mParticleSystem.Update(deltaTime);
+	mParticleSystem.Update(deltaTime);
 	mCharacterAnimator.Update(deltaTime);
 	mCharacterAnimator2.Update(deltaTime);
 	mCharacterAnimator3.Update(deltaTime);
@@ -266,7 +266,6 @@ void GameState::PlayNextAnimation()
 void GameState::Render()
 {
 	mStandardEffect.Begin();
-	//mParticleSystemEffect.Begin();
 	if (mShowSkeleton)
 	{
 		AnimationUtil::BoneTransforms boneTransforms;
@@ -284,11 +283,14 @@ void GameState::Render()
 	mStandardEffect.Render(mCharacter3);
 	mWall.transform = mWallAnimation.GetTransform(mAnimationTime);
 	mWall2.transform = mWallAnimation2.GetTransform(mAnimationTime);
-	//mParticleSystem.Render(mParticleSystemEffect);
 	mStandardEffect.Render(mGround);
 	mStandardEffect.Render(mWall);
 	mStandardEffect.Render(mWall2);
-	//mParticleSystemEffect.End();
+
+	mParticleSystemEffect.Begin();
+	mParticleSystem.Render(mParticleSystemEffect);
+	mParticleSystemEffect.End();
+
 	mStandardEffect.End();
 }
 
