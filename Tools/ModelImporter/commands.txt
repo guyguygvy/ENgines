@@ -1,6 +1,7 @@
 -scale 0.01 ../../Assets/Models/Abe/Abe.fbx ../../Assets/Models/Abe/Abe.model
 -scale 0.01 ../../Assets/Models/Man/Man.fbx ../../Assets/Models/Man/Man.model
 -scale 0.01 ../../Assets/Models/Remy/Remy.fbx ../../Assets/Models/Remy/Remy.model
+-scale 0.01 ../../Assets/Models/SmallMan/small.fbx ../../Assets/Models/SmallMan/small.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/Dying.fbx ../../Assets/Models/Remy/Dying.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/Capoeira.fbx ../../Assets/Models/Remy/Capoeira.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/OldManIdle.fbx ../../Assets/Models/Remy/OldManIdle.model
@@ -12,3 +13,4 @@
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/StandUp.fbx ../../Assets/Models/Remy/StandUp.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/ChickenDance.fbx ../../Assets/Models/Remy/ChickenDance.model
 -scale 0.01 -animOnly 1 ../../Assets/Models/Remy/HouseDancing.fbx ../../Assets/Models/Remy/HouseDancing.model
+-scale 0.01 -animOnly 1 ../../Assets/Models/SmallMan/Crying.fbx ../../Assets/Models/SmallMan/Crying.model

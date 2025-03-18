@@ -24,15 +24,17 @@ protected:
 	ENgines::Graphics::DirectionalLight mDirectionalLight;
 	ENgines::Graphics::StandardEffect mStandardEffect;
 	ENgines::Graphics::RenderGroup mCharacter;
-	ENgines::Graphics::RenderGroup mCharacter2;
 	ENgines::Graphics::Animator mCharacterAnimator;
 	ENgines::Graphics::RenderObject mGround;
 	ENgines::Graphics::Animation mWallAnimation;
 	ENgines::Graphics::Animation mWallAnimation2;
 	ENgines::Graphics::Animation mCharacterAnimation1;
-	ENgines::Graphics::Animation mCharacterAnimation2;
 	ENgines::Graphics::RenderObject mWall;
 	ENgines::Graphics::RenderObject mWall2;
+
+	ENgines::Graphics::RenderGroup mCharacter2;
+	ENgines::Graphics::Animator mCharacterAnimator2;
+	ENgines::Graphics::Animation mCharacterAnimation2;
 
 	ENgines::Graphics::ParticleSystemEffect mParticleSystemEffect;
 	ENgines::Physics::ParticleSystem mParticleSystem;
@@ -45,4 +47,5 @@ protected:
 	bool mShowSkeleton = false;
 	float mAnimationTime = 0.0f;
 	int mAnimationIndex = -1;
+	int mAnimationIndex2 = -1;
 };

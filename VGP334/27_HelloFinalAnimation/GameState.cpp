@@ -60,6 +60,10 @@ void GameState::Initialize()
 	ModelCache::Get()->AddAnimation(mCharacter.modelId, L"../../Assets/Models/Remy/Dying.model");
 	mCharacterAnimator.Initialize(mCharacter.modelId);
 
+	mCharacter2.Initialize(L"../../Assets/Models/SmallMan/small.model", &mCharacterAnimator2);
+	ModelCache::Get()->AddAnimation(mCharacter2.modelId, L"../../Assets/Models/SmallMan/Crying.model");
+	mCharacterAnimator2.Initialize(mCharacter2.modelId);
+
 	AnimationKeyEvent ake;
 	ake.SetIndex(2);
 
@@ -93,11 +97,16 @@ void GameState::Initialize()
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 46.7f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 48.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 53.0f)
-		.AddPositionKey({ 1.0f, 0.5f, 5.0f }, 80.0f)
+		.AddPositionKey({ 1.0f, 0.5f, 5.0f }, 90.0f)
 		.Build();
+
+	mCharacterAnimation2 = AnimationBuilder()
+	.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 0.1f)
+	.AddPositionKey({ 1.0f, 0.5f, 0.0f }, 0.2f)
+		.Build();
+	
 	mWallAnimation = AnimationBuilder()
 		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 270.0f * Math::Constants::DegToRad), 0.1f)
-		//.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::YAxis, 90.0f * Math::Constants::DegToRad), 0.11f)
 		.AddPositionKey({ 0.0f, -15.0f, 10.0f }, 0.12f)
 		.AddPositionKey({ .0f, 5.0f, 10.0f }, 19.0f)
 		.AddPositionKey({ -2.0f, 5.0f, 10.0f }, 24.0f)
@@ -125,6 +134,7 @@ void GameState::Terminate()
 {
 	mGround.Terminate();
 	mCharacter.Terminate();
+	mCharacter2.Terminate();
 	mWall.Terminate();
 	mWall2.Terminate();
 	/*mParticleSystem.Terminate();
@@ -148,8 +158,16 @@ void GameState::Update(float deltaTime)
 			mAnimationTime -= mCharacterAnimation1.GetDuration();
 		}
 	}
+	if (mCharacterAnimation2.GetDuration() > 0.0f)
+	{
+		float prevTime = mAnimationTime;
+		mCharacterAnimation2.PlayEvent(prevTime, mAnimationTime);
+		Event event;
+		mCharacterAnimation2.PlayParameterEvent(prevTime, mAnimationTime, event);
+	}
 	//mParticleSystem.Update(deltaTime);
 	mCharacterAnimator.Update(deltaTime);
+	mCharacterAnimator2.Update(deltaTime);
 }
 
 void GameState::UpdateCamera(float deltaTime)
@@ -205,11 +223,17 @@ void GameState::PlayMitaiSoundEvent()
 void GameState::PlayNextAnimation()
 {
 	mAnimationIndex++;
+	mAnimationIndex2++;
 	if (mAnimationIndex >= mCharacterAnimator.GetAnimationCount())
 	{
 		mAnimationIndex = 0;
 	}
+	if (mAnimationIndex2 >= mCharacterAnimator2.GetAnimationCount())
+	{
+		mAnimationIndex2 = 1;
+	}
 	mCharacterAnimator.PlayAnimation(mAnimationIndex, true);
+	mCharacterAnimator2.PlayAnimation(mAnimationIndex2, true);
 }
 
 void GameState::Render()
@@ -226,6 +250,7 @@ void GameState::Render()
 	{
 		mStandardEffect.Render(mCharacter);
 	}
+	mStandardEffect.Render(mCharacter2);
 	mWall.transform = mWallAnimation.GetTransform(mAnimationTime);
 	mWall2.transform = mWallAnimation2.GetTransform(mAnimationTime);
 	//mParticleSystem.Render(mParticleSystemEffect);
