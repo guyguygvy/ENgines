@@ -35,6 +35,9 @@ protected:
 	ENgines::Graphics::RenderGroup mCharacter2;
 	ENgines::Graphics::Animator mCharacterAnimator2;
 	ENgines::Graphics::Animation mCharacterAnimation2;
+	ENgines::Graphics::RenderGroup mCharacter3;
+	ENgines::Graphics::Animator mCharacterAnimator3;
+	ENgines::Graphics::Animation mCharacterAnimation3;
 
 	ENgines::Graphics::ParticleSystemEffect mParticleSystemEffect;
 	ENgines::Physics::ParticleSystem mParticleSystem;
@@ -48,4 +51,5 @@ protected:
 	float mAnimationTime = 0.0f;
 	int mAnimationIndex = -1;
 	int mAnimationIndex2 = -1;
+	int mAnimationIndex3 = -1;
 };

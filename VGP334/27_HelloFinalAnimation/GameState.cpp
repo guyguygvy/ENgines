@@ -64,6 +64,10 @@ void GameState::Initialize()
 	ModelCache::Get()->AddAnimation(mCharacter2.modelId, L"../../Assets/Models/SmallMan/Crying.model");
 	mCharacterAnimator2.Initialize(mCharacter2.modelId);
 
+	mCharacter3.Initialize(L"../../Assets/Models/SmallMan2/small.model", &mCharacterAnimator3);
+	ModelCache::Get()->AddAnimation(mCharacter3.modelId, L"../../Assets/Models/SmallMan2/Crying.model");
+	mCharacterAnimator3.Initialize(mCharacter3.modelId);
+
 	AnimationKeyEvent ake;
 	ake.SetIndex(2);
 
@@ -85,7 +89,7 @@ void GameState::Initialize()
 	mCharacterAnimation1 = AnimationBuilder()
 	.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 0.1f)
 		.AddEventKey(std::bind(&GameState::PlayMitaiSoundEvent, this), 0.1f)
-		.AddPositionKey({ 1.0f, 0.5f, 0.0f }, 0.4f)
+		.AddPositionKey({ 0.0f, 0.0f, 0.0f }, 0.4f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 10.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 20.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 27.0f)
@@ -95,20 +99,30 @@ void GameState::Initialize()
 		.AddEventKey(std::bind(&GameState::PlayBreakSoundEvent, this), 45.8f)
 		.AddEventKey(std::bind(&GameState::PlayAAASoundEvent, this), 46.1f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 46.7f)
+		.AddPositionKey({ 0.0f, 0.0f, 0.0f }, 46.8f)
+		.AddPositionKey({ 0.0f, 0.0f, 3.0f }, 46.81f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 48.0f)
 		.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 53.0f)
-		.AddPositionKey({ 1.0f, 0.5f, 5.0f }, 90.0f)
+		.AddPositionKey({ 0.0f, 0.0f, 3.0f }, 89.0f)
 		.Build();
 
 	mCharacterAnimation2 = AnimationBuilder()
 	.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 0.1f)
-	.AddPositionKey({ 1.0f, 0.5f, 0.0f }, 0.2f)
+	.AddPositionKey({ 4.0f, -10.0f, 15.0f }, 0.2f)
+	.AddPositionKey({ 4.0f, 0.0f, 15.0f }, 19.0f)
+	.AddPositionKey({ 4.0f, 0.0f, 6.0f }, 55.0f)
+		.Build();
+	mCharacterAnimation3 = AnimationBuilder()
+	.AddEventKey(std::bind(&GameState::PlayNextAnimation, this), 0.1f)
+	.AddPositionKey({ -4.0f, -10.0f, 15.0f }, 0.2f)
+	.AddPositionKey({ -4.0f, 0.0f, 15.0f }, 19.0f)
+	.AddPositionKey({ -4.0f, 0.0f, 6.0f }, 55.0f)
 		.Build();
 	
 	mWallAnimation = AnimationBuilder()
 		.AddRotationKey(Quaternion::CreateFromAxisAngle(Math::Vector3::XAxis, 270.0f * Math::Constants::DegToRad), 0.1f)
 		.AddPositionKey({ 0.0f, -15.0f, 10.0f }, 0.12f)
-		.AddPositionKey({ .0f, 5.0f, 10.0f }, 19.0f)
+		.AddPositionKey({ .0f, 5.0f, 10.0f }, 18.5f)
 		.AddPositionKey({ -2.0f, 5.0f, 10.0f }, 24.0f)
 		.AddPositionKey({ 2.0f, 5.0f, 10.0f }, 29.0f)
 		.AddPositionKey({ -2.0f, 5.0f, 10.0f }, 34.0f)
@@ -135,6 +149,7 @@ void GameState::Terminate()
 	mGround.Terminate();
 	mCharacter.Terminate();
 	mCharacter2.Terminate();
+	mCharacter3.Terminate();
 	mWall.Terminate();
 	mWall2.Terminate();
 	/*mParticleSystem.Terminate();
@@ -165,9 +180,17 @@ void GameState::Update(float deltaTime)
 		Event event;
 		mCharacterAnimation2.PlayParameterEvent(prevTime, mAnimationTime, event);
 	}
+	if (mCharacterAnimation3.GetDuration() > 0.0f)
+	{
+		float prevTime = mAnimationTime;
+		mCharacterAnimation3.PlayEvent(prevTime, mAnimationTime);
+		Event event;
+		mCharacterAnimation3.PlayParameterEvent(prevTime, mAnimationTime, event);
+	}
 	//mParticleSystem.Update(deltaTime);
 	mCharacterAnimator.Update(deltaTime);
 	mCharacterAnimator2.Update(deltaTime);
+	mCharacterAnimator3.Update(deltaTime);
 }
 
 void GameState::UpdateCamera(float deltaTime)
@@ -232,8 +255,13 @@ void GameState::PlayNextAnimation()
 	{
 		mAnimationIndex2 = 1;
 	}
+	if (mAnimationIndex3 >= mCharacterAnimator3.GetAnimationCount())
+	{
+		mAnimationIndex3 = 1;
+	}
 	mCharacterAnimator.PlayAnimation(mAnimationIndex, true);
 	mCharacterAnimator2.PlayAnimation(mAnimationIndex2, true);
+	mCharacterAnimator3.PlayAnimation(mAnimationIndex3, true);
 }
 
 void GameState::Render()
@@ -250,7 +278,11 @@ void GameState::Render()
 	{
 		mStandardEffect.Render(mCharacter);
 	}
+	mCharacter.transform = mCharacterAnimation1.GetTransform(mAnimationTime);
+	mCharacter2.transform = mCharacterAnimation2.GetTransform(mAnimationTime);
+	mCharacter3.transform = mCharacterAnimation3.GetTransform(mAnimationTime);
 	mStandardEffect.Render(mCharacter2);
+	mStandardEffect.Render(mCharacter3);
 	mWall.transform = mWallAnimation.GetTransform(mAnimationTime);
 	mWall2.transform = mWallAnimation2.GetTransform(mAnimationTime);
 	//mParticleSystem.Render(mParticleSystemEffect);
