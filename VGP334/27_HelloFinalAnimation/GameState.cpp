@@ -157,7 +157,6 @@ void GameState::Terminate()
 	mStandardEffect.Terminate();
 }
 
-
 void GameState::Update(float deltaTime)
 {
 	UpdateCamera(deltaTime);
@@ -307,7 +306,8 @@ void GameState::DebugUI()
 		ImGui::ColorEdit4("Specular##Light", &mDirectionalLight.specular.r);
 	}
 
-
+	ImGui::Text("Timer: ");
+	ImGui::Text(std::to_string(mAnimationTime).c_str());
 	ImGui::Checkbox("ShowSkeleton", &mShowSkeleton);
 
 	int maxAnimations = mCharacterAnimator.GetAnimationCount();

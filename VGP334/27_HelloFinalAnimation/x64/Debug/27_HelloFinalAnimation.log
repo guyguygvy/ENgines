@@ -18,7 +18,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(313,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(312,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
