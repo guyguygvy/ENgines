@@ -13,6 +13,9 @@
 #include <Bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.h>
 #include <Bullet/BulletSoftBody/btSoftBodySolvers.h>
 
+#define USE_SOFT_BODY
+#define USE_PHYSICS_SERVICE
+
 // helper function
 template<class T>
 inline void SafeDelete(T*& ptr)
@@ -37,16 +40,6 @@ inline ENgines::Math::Vector3 ToVector3(const btVector3& v)
 	};
 }
 
-inline ENgines::Color ToColor(const btVector3& c)
-{
-	return {
-		static_cast<float>(c.getX()),
-		static_cast<float>(c.getY()),
-		static_cast<float>(c.getZ()),
-		1.0f
-	};
-}
-
 inline btQuaternion TobtQuaternion(const ENgines::Math::Quaternion& q)
 {
 	return btQuaternion(q.x, q.y, q.z, q.w);
@@ -61,7 +54,7 @@ inline ENgines::Math::Quaternion ToQuaternion(const btQuaternion& q)
 	};
 }
 
-inline ENgines::Color TOColor(const btVector3& c)
+inline ENgines::Color ToColor(const btVector3& c)
 {
 	return {
 		static_cast<float>(c.getX()),

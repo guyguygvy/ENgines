@@ -1,0 +1,34 @@
+{
+  "Components": {
+    "TransformComponent": {
+      "Position": [ 0.0, 10.0, 0.0 ],
+      "Rotation": [ 0.0, 0.0, 0.0, 1.0 ],
+      "Scale": [ 1.0, 1.0, 1.0 ]
+    },
+    "ModelComponent": {
+      "FileName": "../../Assets/Models/Remy/Remy.model",
+      "Animations": [
+        "../../Assets/Models/Remy/SillyDancing.animset",
+        "../../Assets/Models/Remy/Capoeira.animset",
+        "../../Assets/Models/Remy/Backflip.animset",
+        "../../Assets/Models/Remy/ChikenDance.animset",
+        "../../Assets/Models/Remy/Dying.animset",
+        "../../Assets/Models/Remy/DropKick.animset",
+        "../../Assets/Models/Remy/HouseDancing.animset",
+        "../../Assets/Models/Remy/FallingFlatImpact.animset",
+        "../../Assets/Models/Remy/OldManIdle.animset"
+      ]
+    },
+    "AnimatorComponent": {
+
+    },
+    "RigidBodyComponent": {
+      "Mass": 1.0,
+      "ColliderData": {
+        "Shape": "Hull",
+        "HalfExtents": [ 0.5, 1.0, 0.5 ],
+        "Origin": [ 0.0, 1.0, 0.0 ]
+      }
+    }
+  }
+}

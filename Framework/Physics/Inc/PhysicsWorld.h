@@ -1,4 +1,5 @@
 #pragma once
+
 #include "PhysicsDebugDraw.h"
 
 namespace ENgines::Physics
@@ -31,19 +32,22 @@ namespace ENgines::Physics
 		void Register(PhysicsObject* physicsObject);
 		void Unregister(PhysicsObject* physicsObject);
 
+		const Settings& GetSettings() const;
+		void UpdateSettings(const Settings& settings);
 		void SetGravity(const ENgines::Math::Vector3& gravity);
 
 	private:
 		Settings mSettings;
 
+		// bullet object
 		btBroadphaseInterface* mInterface = nullptr;
 		btCollisionDispatcher* mDispatcher = nullptr;
 		btDefaultCollisionConfiguration* mCollisionConfiguration = nullptr;
-		//btDiscreteDynamicsWorld* mDynamicsWorld = nullptr;
 		btSequentialImpulseConstraintSolver* mSolver = nullptr;
 
 		using PhysicsObjects = std::vector<PhysicsObject*>;
-		PhysicsObjects mPhysicsObjects; 
+		PhysicsObjects mPhysicsObjects;
+
 		PhysicsDebugDraw mPhysicsDebugDraw;
 		bool mDebugDraw = false;
 

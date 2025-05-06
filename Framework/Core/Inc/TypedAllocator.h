@@ -1,33 +1,40 @@
 #pragma once
 
-#include ""BlockAllocator.h
+#include "BlockAllocator.h"
 
 namespace ENgines::Core
 {
-	template <Class DataTyoe>
-	classTypedAcclocator: private BlockAllocator
+	template<class DataType>
+	class TypedAllocator : private BlockAllocator
 	{
 	public:
-		TypedAllocator(const char* name, size_t capacity) : BlockAllocator(name, sizeof(DataType), capacity)
+		TypedAllocator(const  char* name, size_t capacity)
+			:BlockAllocator(name, sizeof(DataType), capacity)
 		{
+
 		}
 
-		TEMPLATE <cLASS... ARGS>
-			DataType* New(Args&&... args)
+		template<class... Args>
+		DataType* New(Args&&... args)
 		{
-			DataType* instance = statoc_cast<DataType*>(Allocate());
-			new(instance) DataType(std::Forward<Args>(args)...);
-			return instance
+			DataType* instance = static_cast<DataType*>(Allocate());
+			if (instance == nullptr)
+			{
+				LOG("Not creating a new instance because the allocation was not successful");
+				return nullptr;
+			}
+			new(instance) DataType(std::forward<Args>(args)...);
+			return instance;
 		}
 
-		void Delete(DataTyoe* ptr)
+		void Delete(DataType* ptr)
 		{
-			if (prt == nullptr)
+			if (ptr == nullptr)
 			{
 				return;
-		}
+			}
 			ptr->~DataType();
-				Free(ptr);
-}
-	}
+			Free(ptr);
+		}
+	};
 }

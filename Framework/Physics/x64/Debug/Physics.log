@@ -35,6 +35,9 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
   PhysicsWorld.cpp
   RigidBody.cpp
   SoftBody.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Physics\Src\SoftBody.cpp(23,71): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/Src/SoftBody.cpp')
+  
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Physics\Src\SoftBody.cpp(41,22): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file '/Src/SoftBody.cpp')
   
