@@ -21,6 +21,8 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ModelIO.cpp(361,26): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   (compiling source file '/Inc/ModelIO.cpp')
   
+  ParticleSystemEffect.h
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\ParticleSystemEffect.h(49,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "Precompiled.h"' to your source?
   Animation.cpp
   AnimationBuilder.cpp
   AnimationUtil.cpp
@@ -28,7 +30,6 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\Model
   BillBoardEffect.cpp
   BlendState.cpp
   Camera.cpp
-  ConstantBuffer.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Inc\ENMath.h(34,10): warning C4804: '>=': unsafe use of type 'bool' in operation
   (compiling source file '/Src/Camera.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Inc\ENMath.h(34,10):
@@ -43,6 +44,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Inc\ENMath.h(
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Math\Inc\ENMath.h(34,31): warning C4804: '-': unsafe use of type 'bool' in operation
   (compiling source file '/Src/Camera.cpp')
   
+  ConstantBuffer.cpp
   DebugUI.cpp
   GaussianBlurEffect.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\GaussianBlurEffect.cpp(72,25): warning C4018: '<': signed/unsigned mismatch
@@ -99,9 +101,9 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshB
               MeshType=ENgines::Graphics::Mesh
           ]
   
-  RenderTarget.cpp
   Generating Code...
   Compiling...
+  RenderTarget.cpp
   Sampler.cpp
   ShadowEffect.cpp
   SimpleDraw.cpp
@@ -130,7 +132,32 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\Textu
       consider using '%ws' in the format string
   
   TextureCache.cpp
+  UIFont.cpp
+  UISprite.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(81,37): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(81,23): warning C4244: 'initializing': conversion from 'LONG' to 'const float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(82,39): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(82,24): warning C4244: 'initializing': conversion from 'LONG' to 'const float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(108,37): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(108,23): warning C4244: 'initializing': conversion from 'LONG' to 'const float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(109,39): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Src\UISprite.cpp(109,24): warning C4244: 'initializing': conversion from 'LONG' to 'const float', possible loss of data
+  (compiling source file '/Src/UISprite.cpp')
+  
+  UISpriteRenderer.cpp
   VertexShader.cpp
   Generating Code...
-x64\Debug\ParticleSystemEffect.obj : warning LNK4042: object specified more than once; extras ignored
-  Graphics.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\Graphics.lib

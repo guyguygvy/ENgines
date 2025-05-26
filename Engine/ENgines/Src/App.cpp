@@ -32,6 +32,8 @@ void App::Run(const AppConfig& config)
 	EventManager::StaticInitialize();
 	AudioSystem::StaticInitialize();
 	SoundEffectManager::StaticInitialize("../../Assets/Sounds/");
+	UIFont::StaticInitialize(UIFont::FontType::TimesNewRoman);
+	UISpriteRenderer::StaticInitialize();
 
 	PhysicsWorld::Settings settings;
 	PhysicsWorld::StaticInitialize(settings);
@@ -72,7 +74,10 @@ void App::Run(const AppConfig& config)
 #endif
 		{
 			mCurrentState->Update(deltaTime);
+#ifndef USE_PHYSICS_SERVICE
 			PhysicsWorld::Get()->Update(deltaTime);
+#endif
+
 		}
 
 		// This is where we send information from cpu to gpu
@@ -89,6 +94,8 @@ void App::Run(const AppConfig& config)
 
 	// terminate singletons
 	PhysicsWorld::StaticTerminate();
+	UISpriteRenderer::StaticTerminate();
+	UIFont::StaticTerminate();
 	SoundEffectManager::StaticTerminate();
 	AudioSystem::StaticTerminate();
 	EventManager::StaticTerminate();

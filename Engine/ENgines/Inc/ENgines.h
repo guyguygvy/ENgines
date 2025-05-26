@@ -11,7 +11,12 @@
 #include "MeshComponent.h"
 #include "ModelComponent.h"
 #include "RenderObjectComponent.h"
+#include "SoundBankComponent.h"
+#include "SoundEffectComponent.h"
 #include "TransformComponent.h"
+#include "UIComponent.h"
+#include "UIButtonComponent.h"
+#include "UISpriteComponent.h"
 
 #include "GameObject.h"
 #include "GameObjectFactory.h"
@@ -21,6 +26,7 @@
 #include "Service.h"
 #include "CameraService.h"
 #include "RenderService.h"
+#include "UIRenderService.h"
 
 namespace ENgines
 {

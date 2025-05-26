@@ -175,6 +175,9 @@
     <ClInclude Include="Inc\Texture.h" />
     <ClInclude Include="Inc\TextureCache.h" />
     <ClInclude Include="Inc\Transform.h" />
+    <ClInclude Include="Inc\UIFont.h" />
+    <ClInclude Include="Inc\UISprite.h" />
+    <ClInclude Include="Inc\UISpriteRenderer.h" />
     <ClInclude Include="Inc\VertexShader.h" />
     <ClInclude Include="Inc\VertexTypes.h" />
   </ItemGroup>
@@ -211,6 +214,9 @@
     <ClCompile Include="Src\TerrainEffect.cpp" />
     <ClCompile Include="Src\Texture.cpp" />
     <ClCompile Include="Src\TextureCache.cpp" />
+    <ClCompile Include="Src\UIFont.cpp" />
+    <ClCompile Include="Src\UISprite.cpp" />
+    <ClCompile Include="Src\UISpriteRenderer.cpp" />
     <ClCompile Include="Src\VertexShader.cpp" />
   </ItemGroup>
   <ItemGroup>

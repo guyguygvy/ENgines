@@ -83,7 +83,18 @@ void SoundEffectManager::Play(SoundId id, bool loop)
 	if (iter != mSoundEffects.end())
 	{
 		iter->second->instance->Stop();
-		iter->second->instance->Play();
+		iter->second->instance->Play(loop);
+	}
+}
+
+void SoundEffectManager::Play(SoundId id, float volume, bool loop)
+{
+	auto iter = mSoundEffects.find(id);
+	if (iter != mSoundEffects.end())
+	{
+		iter->second->instance->Stop();
+		iter->second->instance->SetVolume(volume);
+		iter->second->instance->Play(loop);
 	}
 }
 
