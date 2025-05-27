@@ -1,21 +1,21 @@
 ﻿  GameState.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\08_HelloSolarSystem\GameState.cpp(28,4): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\08_HelloSolarSystem\GameState.cpp(29,4): warning C4305: 'initializing': truncation from 'double' to 'float'
@@ -31,7 +31,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\08_HelloSolarSystem\G
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\08_HelloSolarSystem\GameState.cpp(185,24): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\08_HelloSolarSystem\GameState.cpp(186,25): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
@@ -42,7 +42,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
           ]
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../../VGP242/08_HelloSolarSystem/GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP242\08_HelloSolarSystem\GameState.cpp(86,17):
@@ -54,25 +54,25 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshB
   
   WinMain.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../08_HelloSolarSystem/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../08_HelloSolarSystem/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../08_HelloSolarSystem/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../08_HelloSolarSystem/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../08_HelloSolarSystem/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../08_HelloSolarSystem/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../08_HelloSolarSystem/WinMain.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):

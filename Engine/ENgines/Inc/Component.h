@@ -3,7 +3,6 @@
 
 namespace ENgines
 {
-
 	class GameObject;
 	class Component
 	{

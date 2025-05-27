@@ -1,25 +1,24 @@
-﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Core\Core.vcxproj]
-  GameState.cpp
+﻿  GameState.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
@@ -30,7 +29,7 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
           ]
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file '../22_HelloPhysics/GameState.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\22_HelloPhysics\GameState.cpp(28,19):
@@ -42,25 +41,25 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshB
   
   WinMain.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../22_HelloPhysics/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../22_HelloPhysics/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../22_HelloPhysics/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../22_HelloPhysics/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../22_HelloPhysics/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../22_HelloPhysics/WinMain.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'WinMain.cpp')
+  (compiling source file '../22_HelloPhysics/WinMain.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
@@ -71,4 +70,4 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
           ]
   
   Generating Code...
-  22_HelloPhysics.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\22_HelloPhysics.exe
+LINK : fatal error LNK1104: cannot open file 'C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\Graphics.lib'

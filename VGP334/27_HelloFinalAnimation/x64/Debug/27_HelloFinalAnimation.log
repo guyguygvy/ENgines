@@ -1,5 +1,4 @@
-﻿C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\ENgines.props(4,5): warning MSB4011: "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\Common\Common.props" cannot be imported again. It was already imported at "C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VSProps\FrameworkLib.props (4,3)". This is most likely a build authoring error. This subsequent import will be ignored. [C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Core\Core.vcxproj]
-  GameState.cpp
+﻿  GameState.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
   (compiling source file 'GameState.cpp')
   
@@ -18,9 +17,52 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file 'GameState.cpp')
   
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(233,29): error C2668: 'ENgines::Audio::SoundEffectManager::Play': ambiguous call to overloaded function
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Audio\Inc\SoundEffectManager.h(27,8):
+      could be 'void ENgines::Audio::SoundEffectManager::Play(ENgines::Audio::SoundId,float,bool)'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Audio\Inc\SoundEffectManager.h(26,8):
+      or       'void ENgines::Audio::SoundEffectManager::Play(ENgines::Audio::SoundId,bool)'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(233,29):
+      while trying to match the argument list '(ENgines::Audio::SoundId)'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(237,29): error C2668: 'ENgines::Audio::SoundEffectManager::Play': ambiguous call to overloaded function
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Audio\Inc\SoundEffectManager.h(27,8):
+      could be 'void ENgines::Audio::SoundEffectManager::Play(ENgines::Audio::SoundId,float,bool)'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Audio\Inc\SoundEffectManager.h(26,8):
+      or       'void ENgines::Audio::SoundEffectManager::Play(ENgines::Audio::SoundId,bool)'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(237,29):
+      while trying to match the argument list '(ENgines::Audio::SoundId)'
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(242,29): error C2668: 'ENgines::Audio::SoundEffectManager::Play': ambiguous call to overloaded function
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Audio\Inc\SoundEffectManager.h(27,8):
+      could be 'void ENgines::Audio::SoundEffectManager::Play(ENgines::Audio::SoundId,float,bool)'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Audio\Inc\SoundEffectManager.h(26,8):
+      or       'void ENgines::Audio::SoundEffectManager::Play(ENgines::Audio::SoundId,bool)'
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(242,29):
+      while trying to match the argument list '(ENgines::Audio::SoundId)'
+  
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(315,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  WinMain.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file 'GameState.cpp')
+  (compiling source file 'WinMain.cpp')
       C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
       the template instantiation context (the oldest one first) is
           C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
@@ -30,15 +72,4 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBo
               DBVTNODE=btDbvtNode
           ]
   
-C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
-  (compiling source file 'GameState.cpp')
-      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Graphics\Inc\MeshBuffer.h(20,23):
-      the template instantiation context (the oldest one first) is
-          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\VGP334\27_HelloFinalAnimation\GameState.cpp(75,19):
-          see reference to function template instantiation 'void ENgines::Graphics::MeshBuffer::Initialize<ENgines::Graphics::Mesh>(const MeshType &)' being compiled
-          with
-          [
-              MeshType=ENgines::Graphics::Mesh
-          ]
-  
-  27_HelloFinalAnimation.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\27_HelloFinalAnimation.exe
+  Generating Code...

@@ -12,7 +12,14 @@
     },
     "PhysicsService": {
 
-    }
+    },
+        "CustomDebugDrawService": {
+
+        },
+        "UIRenderService": {
+
+        }
+
   },
   "GameObjects": {
     "Camera": {
@@ -39,6 +46,10 @@
     },
     "Ground": {
       "Template": "../../Assets/Templates/ground_obj.json"
-    }
+    },
+        "TestScreen": {
+            "Template": "../../Assets/Templates/screen_test.json"
+        }
+
   }
 }
