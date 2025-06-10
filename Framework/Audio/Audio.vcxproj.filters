@@ -15,13 +15,13 @@
     <ClInclude Include="Inc\Audio.h">
       <Filter>Inc</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Precompiled.h">
-      <Filter>Src</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\AudioSystem.h">
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Inc\SoundEffectManager.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\Precompiled.h">
       <Filter>Inc</Filter>
     </ClInclude>
   </ItemGroup>

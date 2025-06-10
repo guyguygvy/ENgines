@@ -138,8 +138,8 @@
     <ClInclude Include="Inc\Audio.h" />
     <ClInclude Include="Inc\AudioSystem.h" />
     <ClInclude Include="Inc\Common.h" />
+    <ClInclude Include="Inc\Precompiled.h" />
     <ClInclude Include="Inc\SoundEffectManager.h" />
-    <ClInclude Include="Src\Precompiled.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\AudioSystem.cpp" />
@@ -153,7 +153,7 @@
       <Project>{4f150a30-cecb-49d1-8283-6a3f57438cf5}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Core\Core.vcxproj">
-      <Project>{e6c1874f-7010-4426-a3dc-b90e92023d73}</Project>
+      <Project>{56afbb7b-a9d1-4a75-ac8a-18c5dcf6ab74}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

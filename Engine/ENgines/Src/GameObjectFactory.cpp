@@ -12,13 +12,21 @@
 #include "ModelComponent.h"
 #include "RigidBodyComponent.h"
 #include "TransformComponent.h"
+#include "SoundBankComponent.h"
+#include "SoundEffectComponent.h"
+#include "UITextComponent.h"
+#include "UISpriteComponent.h"
+#include "UIButtonComponent.h"
 
 using namespace ENgines;
 
 namespace
 {
+	CustomComponentCallback sTryAddComponent;
+	CustomComponentCallback sTryGetComponent;
 	Component* AddComponent(const std::string& componentName, GameObject& gameObject)
 	{
+
 		Component* newComponent = nullptr;
 		if (componentName == "AnimatorComponent")
 		{
@@ -48,52 +56,83 @@ namespace
 		{
 			newComponent = gameObject.AddComponent<TransformComponent>();
 		}
+		else if (componentName == "SoundBankComponent")
+		{
+			newComponent = gameObject.AddComponent<SoundBankComponent>();
+		}
+		else if (componentName == "SoundEffectComponent")
+		{
+			newComponent = gameObject.AddComponent<SoundEffectComponent>();
+		}
+		else if (componentName == "UIButtonComponent")
+		{
+			newComponent = gameObject.AddComponent<UIButtonComponent>();
+		}
+		else if (componentName == "UISpriteComponent")
+		{
+			newComponent = gameObject.AddComponent<UISpriteComponent>();
+		}
+		else if (componentName == "UITextComponent")
+		{
+			newComponent = gameObject.AddComponent<UITextComponent>();
+		}
 		else
 		{
-			ASSERT(false, "GameObjectFactory: component [%s] is not valid", componentName.c_str());
+			newComponent = sTryAddComponent(componentName, gameObject);
+			ASSERT(newComponent != nullptr, "GameObjectFactory: component [%s] is not valid", componentName.c_str());
 		}
 
 		return newComponent;
 	}
+
+	Component* GetComponent(const std::string& componentName, GameObject& gameObject)
+	{
+		Component* component = nullptr;
+		if (componentName == "AnimatorComponent")
+		{
+			component = gameObject.GetComponent<AnimatorComponent>();
+		}
+		else if (componentName == "CameraComponent")
+		{
+			component = gameObject.GetComponent<CameraComponent>();
+		}
+		else if (componentName == "FPSCameraComponent")
+		{
+			component = gameObject.GetComponent<FPSCameraComponent>();
+		}
+		else if (componentName == "MeshComponent")
+		{
+			component = gameObject.GetComponent<MeshComponent>();
+		}
+		else if (componentName == "ModelComponent")
+		{
+			component = gameObject.GetComponent<ModelComponent>();
+		}
+		else if (componentName == "RigidBodyComponent")
+		{
+			component = gameObject.GetComponent<RigidBodyComponent>();
+		}
+		else if (componentName == "TransformComponent")
+		{
+			component = gameObject.GetComponent<TransformComponent>();
+		}
+		else
+		{
+			component = sTryGetComponent(componentName, gameObject);
+			ASSERT(component != nullptr, "GameObjectFactory: component [%s] is not valid", componentName.c_str());
+		}
+
+		return component;
+	}
 }
 
-Component* GetComponent(const std::string& componentName, GameObject& gameObject)
+void GameObjectFactory::SetCustomMake(CustomComponentCallback callback)
 {
-	Component* component = nullptr;
-	if (componentName == "AnimatorComponent")
-	{
-		component = gameObject.GetComponent<AnimatorComponent>();
-	}
-	else if (componentName == "CameraComponent")
-	{
-		component = gameObject.GetComponent<CameraComponent>();
-	}
-	else if (componentName == "FPSCameraComponent")
-	{
-		component = gameObject.GetComponent<FPSCameraComponent>();
-	}
-	else if (componentName == "MeshComponent")
-	{
-		component = gameObject.GetComponent<MeshComponent>();
-	}
-	else if (componentName == "ModelComponent")
-	{
-		component = gameObject.GetComponent<ModelComponent>();
-	}
-	else if (componentName == "RigidBodyComponent")
-	{
-		component = gameObject.GetComponent<RigidBodyComponent>();
-	}
-	else if (componentName == "TransformComponent")
-	{
-		component = gameObject.GetComponent<TransformComponent>();
-	}
-	else
-	{
-		ASSERT(false, "GameObjectFactory: component [%s] is not valid", componentName.c_str());
-	}
-
-	return component;
+	sTryAddComponent = callback;
+}
+void GameObjectFactory::SetCustomGet(CustomComponentCallback callback)
+{
+	sTryGetComponent = callback;
 }
 
 void GameObjectFactory::Make(const std::filesystem::path& templatePath, GameObject& gameObject, GameWorld& gameWorld)

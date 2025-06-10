@@ -40,7 +40,7 @@ void TransformComponent::Deserialize(const rapidjson::Value& value)
 	}
 }
 
-Transform ENgines::TransformComponent::GetWorldTransform() const
+Transform TransformComponent::GetWorldTransform() const
 {
 	Transform worldTransform = *this;
 	const GameObject* parent = GetOwner().GetParent();

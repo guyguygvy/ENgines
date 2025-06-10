@@ -77,3 +77,33 @@ const GameObjectHandle& GameObject::GetHandle() const
 {
 	return mHandle;
 }
+
+void ENgines::GameObject::AddChild(GameObject* child)
+{
+	mChildren.push_back(child);
+}
+
+GameObject* ENgines::GameObject::GetChild(uint32_t index)
+{
+	return nullptr;
+}
+
+const GameObject* ENgines::GameObject::GetChild(uint32_t index) const
+{
+	return nullptr;
+}
+
+void ENgines::GameObject::SetParent(GameObject* parent)
+{
+	mParent = parent;
+}
+
+GameObject* ENgines::GameObject::GetParent()
+{
+	return nullptr;
+}
+
+const GameObject* ENgines::GameObject::GetParent() const
+{
+	return nullptr;
+}

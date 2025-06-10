@@ -160,9 +160,9 @@
     <ClInclude Include="Inc\Model.h" />
     <ClInclude Include="Inc\ModelCache.h" />
     <ClInclude Include="Inc\ModelIO.h" />
+    <ClInclude Include="Inc\ParticleSystemEffect.h" />
     <ClInclude Include="Inc\PixelShader.h" />
     <ClInclude Include="Inc\PostProcessingEffect.h" />
-    <ClInclude Include="Inc\Precompiled.h" />
     <ClInclude Include="Inc\RenderObject.h" />
     <ClInclude Include="Inc\RenderTarget.h" />
     <ClInclude Include="Inc\Sampler.h" />
@@ -180,10 +180,9 @@
     <ClInclude Include="Inc\UISpriteRenderer.h" />
     <ClInclude Include="Inc\VertexShader.h" />
     <ClInclude Include="Inc\VertexTypes.h" />
+    <ClInclude Include="Src\Precompiled.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Inc\ModelIO.cpp" />
-    <ClCompile Include="Inc\ParticleSystemEffect.h" />
     <ClCompile Include="Src\Animation.cpp" />
     <ClCompile Include="Src\AnimationBuilder.cpp" />
     <ClCompile Include="Src\AnimationUtil.cpp" />
@@ -198,6 +197,7 @@
     <ClCompile Include="Src\MeshBuffer.cpp" />
     <ClCompile Include="Src\MeshBuilder.cpp" />
     <ClCompile Include="Src\ModelCache.cpp" />
+    <ClCompile Include="Src\ModelIO.cpp" />
     <ClCompile Include="Src\ParticleSystemEffect.cpp" />
     <ClCompile Include="Src\PixelShader.cpp" />
     <ClCompile Include="Src\PostProcessingEffect.cpp" />
@@ -222,6 +222,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\External\DirectXTK\DirectXTK_Desktop_2019.vcxproj">
       <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\External\FW1FontWrapper\FW1FontWrapper.vcxproj">
+      <Project>{0d034612-14e2-44e7-993a-72344a2ca7bd}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\External\ImGui\ImGui.vcxproj">
       <Project>{52d656a2-a2f4-4c54-a3c7-653427bed1e8}</Project>

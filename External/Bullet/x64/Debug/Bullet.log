@@ -350,152 +350,152 @@ C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynami
   (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyFixedConstraint.cpp(194,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyFixedConstraint.cpp(200,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyFixedConstraint.cpp(207,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyFixedConstraint.cpp(213,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp(195,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp(201,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp(208,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyPoint2Point.cpp(214,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file 'External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(88,40): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(88,27): warning C4244: 'initializing': conversion from 'double' to 'const btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(107,40): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(107,27): warning C4244: 'initializing': conversion from 'double' to 'const btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(163,41): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(163,28): warning C4244: 'initializing': conversion from 'double' to 'const btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(174,41): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(174,28): warning C4244: 'initializing': conversion from 'double' to 'const btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(213,41): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(213,28): warning C4244: 'initializing': conversion from 'double' to 'const btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(224,41): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyMLCPConstraintSolver.cpp(224,28): warning C4244: 'initializing': conversion from 'double' to 'const btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodyJointLimitConstraint.cpp(118,22): warning C4244: 'initializing': conversion from 'int' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySliderConstraint.cpp(213,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySliderConstraint.cpp(219,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySliderConstraint.cpp(226,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySliderConstraint.cpp(232,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointMotor.cpp(31,17): warning C4305: 'argument': truncation from 'double' to 'const btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointMotor.cpp(31,12): warning C4305: 'argument': truncation from 'double' to 'const btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointMotor.cpp(31,7): warning C4305: 'argument': truncation from 'double' to 'const btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointMotor.cpp(146,26): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointMotor.cpp(160,19): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointMotor.cpp(166,29): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointMotor.cpp(166,7): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(36,17): warning C4305: 'argument': truncation from 'double' to 'const btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(36,12): warning C4305: 'argument': truncation from 'double' to 'const btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(36,7): warning C4305: 'argument': truncation from 'double' to 'const btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(208,26): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(222,19): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(242,29): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(242,8): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Featherstone\btMultiBodySphericalJointLimit.cpp(268,29): warning C4305: 'argument': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Character\btKinematicCharacterController.cpp(139,18): warning C4305: '=': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Character\btKinematicCharacterController.cpp(149,18): warning C4305: '=': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletDynamics\Character\btKinematicCharacterController.cpp(157,26): warning C4305: '=': truncation from 'double' to 'btScalar'
-  (compiling source file '../../External/Bullet/btBulletDynamicsAll.cpp')
+  (compiling source file 'btBulletDynamicsAll.cpp')
   
   btLinearMathAll.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\LinearMath\btVector3.cpp(179,35): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
-  (compiling source file '../../External/Bullet/btLinearMathAll.cpp')
+  (compiling source file 'btLinearMathAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\LinearMath\btVector3.cpp(184,11): warning C4267: '-=': conversion from 'size_t' to 'unsigned long', possible loss of data
-  (compiling source file '../../External/Bullet/btLinearMathAll.cpp')
+  (compiling source file 'btLinearMathAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\LinearMath\btVector3.cpp(430,34): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
-  (compiling source file '../../External/Bullet/btLinearMathAll.cpp')
+  (compiling source file 'btLinearMathAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\LinearMath\btVector3.cpp(572,35): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
-  (compiling source file '../../External/Bullet/btLinearMathAll.cpp')
+  (compiling source file 'External/Bullet/btLinearMathAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\LinearMath\btVector3.cpp(577,11): warning C4267: '-=': conversion from 'size_t' to 'unsigned long', possible loss of data
-  (compiling source file '../../External/Bullet/btLinearMathAll.cpp')
+  (compiling source file 'External/Bullet/btLinearMathAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\LinearMath\btVector3.cpp(824,34): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
-  (compiling source file '../../External/Bullet/btLinearMathAll.cpp')
+  (compiling source file 'External/Bullet/btLinearMathAll.cpp')
   
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\LinearMath\btReducedVector.h(299,13): warning C4244: 'argument': conversion from 'double' to 'btScalar', possible loss of data
   (compiling source file '../../External/Bullet/btLinearMathAll.cpp')

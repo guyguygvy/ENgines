@@ -3,9 +3,9 @@
   BlockAllocator.cpp
   TimeUtil.cpp
   Window.cpp
+  WindowMessageHandler.cpp
 C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\Framework\Core\Src\Window.cpp(68,1): warning C4002: too many arguments for function-like macro invocation 'CreateWindowW'
   (compiling source file '/Src/Window.cpp')
   
-  WindowMessageHandler.cpp
   Generating Code...
   Core.vcxproj -> C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\Core.lib

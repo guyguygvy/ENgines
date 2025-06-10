@@ -51,9 +51,6 @@
     <ClInclude Include="Inc\Sampler.h">
       <Filter>Inc</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\Precompiled.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
     <ClInclude Include="Inc\DebugUI.h">
       <Filter>Inc</Filter>
     </ClInclude>
@@ -88,9 +85,6 @@
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Inc\Model.h">
-      <Filter>Inc</Filter>
-    </ClInclude>
-    <ClInclude Include="Inc\ModelIO.h">
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Inc\PostProcessingEffect.h">
@@ -142,6 +136,15 @@
       <Filter>Inc</Filter>
     </ClInclude>
     <ClInclude Include="Inc\UISpriteRenderer.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ModelIO.h">
+      <Filter>Inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Precompiled.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\ParticleSystemEffect.h">
       <Filter>Inc</Filter>
     </ClInclude>
   </ItemGroup>
@@ -200,9 +203,6 @@
     <ClCompile Include="Src\ModelCache.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="Inc\ModelIO.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
     <ClCompile Include="Src\PostProcessingEffect.cpp">
       <Filter>Src</Filter>
     </ClCompile>
@@ -233,12 +233,6 @@
     <ClCompile Include="Src\Animator.cpp">
       <Filter>Src</Filter>
     </ClCompile>
-    <ClCompile Include="Inc\ParticleSystemEffect.h">
-      <Filter>Inc</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\ParticleSystemEffect.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
     <ClCompile Include="Src\UIFont.cpp">
       <Filter>Src</Filter>
     </ClCompile>
@@ -246,6 +240,12 @@
       <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="Src\UISpriteRenderer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ModelIO.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ParticleSystemEffect.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
