@@ -29,7 +29,7 @@
       "Template": "../../Assets/Templates/model_obj.json"
     },
     "Object1": {
-      "Template": "../../Assets/Templates/mesh_obj.json",
+      "Template": "../../Assets/Templates/Mesh_obj.json",
       "Components": {
         "TransformComponent": {
           "Position": [ 2.0, 1.0, 0.0 ]
@@ -37,7 +37,7 @@
       }
     },
     "Object2": {
-      "Template": "../../Assets/Templates/mesh_obj.json",
+      "Template": "../../Assets/Templates/Mesh_obj.json",
       "Components": {
         "TransformComponent": {
           "Position": [ -2.0, 1.0, 0.0 ]

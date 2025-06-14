@@ -20,8 +20,9 @@ namespace ENgines
 
 		GameObject* CreateGameObject(std::string name, const std::filesystem::path& templatePath = "");
 		void DestroyGameObject(const GameObjectHandle& handle);
-
+		bool IsInEditMode() const;
 		void LoadLevel(const std::filesystem::path& levelFile);
+		bool IsRequestEdit();
 
 		template<class ServiceType>
 		ServiceType* AddService()

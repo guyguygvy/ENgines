@@ -1,1 +1,154 @@
-﻿
+﻿  CustomDebugDrawComponent.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'CustomDebugDrawComponent.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawComponent.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawComponent.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawComponent.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawComponent.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawComponent.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawComponent.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
+  
+  CustomDebugDrawService.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'CustomDebugDrawService.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawService.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawService.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawService.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawService.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawService.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'CustomDebugDrawService.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
+  
+  EditTemplateState.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'EditTemplateState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'EditTemplateState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'EditTemplateState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'EditTemplateState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'EditTemplateState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'EditTemplateState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'EditTemplateState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
+  
+  GameState.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'GameState.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
+  
+  WinMain.cpp
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(38,50): warning C4305: 'initializing': truncation from 'double' to 'btScalar'
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1232,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1357,21): warning C4244: '+=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1361,21): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1385,20): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1387,23): warning C4244: '=': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+  
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17): warning C4244: 'initializing': conversion from 'double' to 'btScalar', possible loss of data
+  (compiling source file 'WinMain.cpp')
+      C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1269,17):
+      the template instantiation context (the oldest one first) is
+          C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\External\Bullet\BulletSoftBody\btSoftBody.h(1303,4):
+          see reference to function template instantiation 'void btSoftBody::updateFace<btDbvtNode>(DBVTNODE *,bool,bool)' being compiled
+          with
+          [
+              DBVTNODE=btDbvtNode
+          ]
+  
+  Generating Code...
+     Creating library C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\32_HelloEditor.lib and object C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\32_HelloEditor.exp
+GameState.obj : error LNK2019: unresolved external symbol "public: bool __cdecl ENgines::GameWorld::IsRequestEdit(void)" (?IsRequestEdit@GameWorld@ENgines@@QEAA_NXZ) referenced in function "public: virtual void __cdecl GameState::DebugUI(void)" (?DebugUI@GameState@@UEAAXXZ)
+C:\Users\ethan\OneDrive\Desktop\School Work\ENgines\x64\Debug\32_HelloEditor.exe : fatal error LNK1120: 1 unresolved externals

@@ -9,45 +9,41 @@ using namespace ENgines::Core;
 using namespace ENgines::Input;
 using namespace ENgines::Audio;
 
-namespace
+Service* CustomServiceMake(const std::string& serviceName, GameWorld& gameWorld)
 {
-	Component* AddCustomComponent(const std::string& componentName, GameObject& gameObject)
+	if (serviceName == "CustomDebugDrawService")
 	{
-		Component* newComponent = nullptr;
-		if (componentName == "CustomDebugDrawComponent")
-		{
-			newComponent = gameObject.AddComponent<CustomDebugDrawComponent>();
-		}
-
-		return newComponent;
+		return gameWorld.AddService<CustomDebugDrawService>();
 	}
-	Component* GetCustomComponent(const std::string& componentName, GameObject& gameObject)
-	{
-		Component* newComponent = nullptr;
-		if (componentName == "CustomDebugDrawComponent")
-		{
-			newComponent = gameObject.GetComponent<CustomDebugDrawComponent>();
-		}
-
-		return newComponent;
-	}
-	Service* AddCustomService(const std::string& serviceName, GameWorld& gameWorld)
-	{
-		Service* service = nullptr;
-		if (serviceName == "CustomDebugDrawService")
-		{
-			service = gameWorld.AddService<CustomDebugDrawService>();
-		}
-		return service;
-	}
+	return nullptr;
 }
+
+Component* CustomComponentMake(const std::string& componentName, GameObject& gameObject)
+{
+	if (componentName == "CustomDebugDrawComponent")
+	{
+		return gameObject.AddComponent<CustomDebugDrawComponent>();
+	}
+	return nullptr;
+}
+
+Component* CustomComponentGet(const std::string& componentName, GameObject& gameObject)
+{
+	if (componentName == "CustomDebugDrawComponent")
+	{
+		return gameObject.GetComponent<CustomDebugDrawComponent>();
+	}
+	return nullptr;
+}
+
 
 void GameState::Initialize()
 {
-	GameObjectFactory::SetCustomMake(AddCustomComponent);
-	GameObjectFactory::SetCustomGet(GetCustomComponent);
-	GameWorld::SetCustomService(AddCustomService);
-	mGameWorld.LoadLevel(L"../../Assets/Templates/Levels/test_level.json");
+	GameWorld::SetCustomService(CustomServiceMake);
+	GameObjectFactory::SetCustomMake(CustomComponentMake);
+	GameObjectFactory::SetCustomGet(CustomComponentGet);
+
+	mGameWorld.LoadLevel(L"../../Assets/Templates/Levels/Test_Level.json");
 }
 
 void GameState::Terminate()

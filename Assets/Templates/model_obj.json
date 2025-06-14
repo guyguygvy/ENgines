@@ -44,7 +44,7 @@
     },
     "Children": {
         "Mesh_Test": {
-            "Template": "../../Assets/Templates/mesh_obj.json",
+            "Template": "../../Assets/Templates/Mesh_obj.json",
             "Components": {
                 "TransformComponent": {
                     "Position": [ 1, 1, 0 ]
