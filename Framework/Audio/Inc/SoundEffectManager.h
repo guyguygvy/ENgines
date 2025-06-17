@@ -24,7 +24,7 @@ namespace ENgines::Audio
 		void Clear();
 
 		void Play(SoundId id, bool loop = false);
-		void Play(SoundId id, float volume = 10.0f, bool loop = false);
+		void Play2(SoundId id, float volume = 10.0f, bool loop = false);
 		void Stop(SoundId id);
 
 	private:

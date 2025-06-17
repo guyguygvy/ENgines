@@ -22,8 +22,8 @@ using namespace ENgines;
 
 namespace
 {
-	CustomComponentCallback sTryAddComponent;
-	CustomComponentCallback sTryGetComponent;
+	CustomComponentCallback TryMake;
+	CustomComponentCallback TryGet;
 	Component* AddComponent(const std::string& componentName, GameObject& gameObject)
 	{
 
@@ -52,10 +52,6 @@ namespace
 		{
 			newComponent = gameObject.AddComponent<RigidBodyComponent>();
 		}
-		else if (componentName == "TransformComponent")
-		{
-			newComponent = gameObject.AddComponent<TransformComponent>();
-		}
 		else if (componentName == "SoundBankComponent")
 		{
 			newComponent = gameObject.AddComponent<SoundBankComponent>();
@@ -63,6 +59,10 @@ namespace
 		else if (componentName == "SoundEffectComponent")
 		{
 			newComponent = gameObject.AddComponent<SoundEffectComponent>();
+		}
+		else if (componentName == "TransformComponent")
+		{
+			newComponent = gameObject.AddComponent<TransformComponent>();
 		}
 		else if (componentName == "UIButtonComponent")
 		{
@@ -78,7 +78,7 @@ namespace
 		}
 		else
 		{
-			newComponent = sTryAddComponent(componentName, gameObject);
+			newComponent = TryMake(componentName, gameObject);
 			ASSERT(newComponent != nullptr, "GameObjectFactory: component [%s] is not valid", componentName.c_str());
 		}
 
@@ -116,9 +116,29 @@ namespace
 		{
 			component = gameObject.GetComponent<TransformComponent>();
 		}
+		else if (componentName == "SoundBankComponent")
+		{
+			component = gameObject.GetComponent<SoundBankComponent>();
+		}
+		else if (componentName == "SoundEffectComponent")
+		{
+			component = gameObject.GetComponent<SoundEffectComponent>();
+		}
+		else if (componentName == "UIButtonComponent")
+		{
+			component = gameObject.GetComponent<UIButtonComponent>();
+		}
+		else if (componentName == "UISpriteComponent")
+		{
+			component = gameObject.GetComponent<UISpriteComponent>();
+		}
+		else if (componentName == "UITextComponent")
+		{
+			component = gameObject.GetComponent<UITextComponent>();
+		}
 		else
 		{
-			component = sTryGetComponent(componentName, gameObject);
+			component = TryGet(componentName, gameObject);
 			ASSERT(component != nullptr, "GameObjectFactory: component [%s] is not valid", componentName.c_str());
 		}
 
@@ -128,11 +148,12 @@ namespace
 
 void GameObjectFactory::SetCustomMake(CustomComponentCallback callback)
 {
-	sTryAddComponent = callback;
+	TryMake = callback;
 }
+
 void GameObjectFactory::SetCustomGet(CustomComponentCallback callback)
 {
-	sTryGetComponent = callback;
+	TryGet = callback;
 }
 
 void GameObjectFactory::Make(const std::filesystem::path& templatePath, GameObject& gameObject, GameWorld& gameWorld)
@@ -174,5 +195,24 @@ void GameObjectFactory::OverrideDeserialize(const rapidjson::Value& value, GameO
 				ownedComponent->Deserialize(component.value);
 			}
 		}
+	}
+}
+
+void GameObjectFactory::SerializeGameObject(rapidjson::Document& doc, const rapidjson::Document& original, GameObject& gameObject)
+{
+	if (original.HasMember("Components"))
+	{
+		auto originalComponents = original["Components"].GetObj();
+		rapidjson::Value components(rapidjson::kObjectType);
+		for (auto& originalData : originalComponents)
+		{
+			Component* ownedComponent = GetComponent(originalData.name.GetString(), gameObject);
+			if (ownedComponent != nullptr)
+			{
+				ownedComponent->Serialize(doc, components, originalData.value);
+			}
+		}
+		doc.SetObject();
+		doc.AddMember("Components", components, doc.GetAllocator());
 	}
 }

@@ -15,7 +15,6 @@ void GameState::Initialize()
 
 	GameObject* transformGO = mGameWorld.CreateGameObject("Transform", L"../../Assets/Templates/mesh_obj.json");
 	transformGO->Initialize();
-
 	GameObject* cameraGO = mGameWorld.CreateGameObject("Camera", L"../../Assets/Templates/fps_camera.json");
 	cameraGO->Initialize();
 }

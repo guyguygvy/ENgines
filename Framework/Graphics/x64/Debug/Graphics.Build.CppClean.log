@@ -2,6 +2,7 @@ c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug
 c:\users\ethan\onedrive\desktop\school work\engines\x64\debug\graphics.pdb
 c:\users\ethan\onedrive\desktop\school work\engines\x64\debug\graphics.idb
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\precompiled.obj
+c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\rendertarget.obj
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\renderobject.obj
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\postprocessingeffect.obj
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\pixelshader.obj
@@ -33,7 +34,6 @@ c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\simpledraw.obj
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\shadoweffect.obj
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\sampler.obj
-c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\rendertarget.obj
 c:\users\ethan\onedrive\desktop\school work\engines\x64\debug\graphics.lib
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\graphics.tlog\cl.command.1.tlog
 c:\users\ethan\onedrive\desktop\school work\engines\framework\graphics\x64\debug\graphics.tlog\cl.items.tlog

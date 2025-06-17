@@ -45,7 +45,7 @@ void EditTemplateState::Initialize()
 	GameObjectFactory::SetCustomMake(CustomComponentMake);
 	GameObjectFactory::SetCustomGet(CustomComponentGet);
 
-	mGameWorld.LoadLevel(L"../../Assets/Templates/Levels/editor_level.json");
+	mGameWorld.LoadLevel(L"../../Assets/Templates/Levels/edtor_level.json");
 }
 
 void EditTemplateState::Terminate()
